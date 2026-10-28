@@ -1,0 +1,31 @@
+schema_version: 1
+kind: model
+id: prelude-9b-sft-v2-full-stage4-step5000
+display_name: Prelude 9B SFT v2 full (21.0B tokens, intermediate) from mid-train stage 4 (128K, YaRN x2), Megatron iter 5000
+publication:
+  status: unpublished
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 131072
+  rope_theta: 9000000
+  rope_scaling: "yarn, factor 2, original_max_position_embeddings 65536"
+  precision: bfloat16
+  chat_template: "Prelude ChatML, Qwen3-compatible (<think>, hermes <tool_call>); enable_thinking=false prefills an empty think block"
+  base_model:
+    id: prelude-9b-midtrain-v1-stage4-128k-yarn2-step1001
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-sft-v2-full-stage4-step5000
+    sha256: prelude-9b-sft-v2-full-stage4-step5000.sha256 (next to the checkpoint)
+  mn5:
+    megatron_checkpoint: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/sft-v2-full-stage4/checkpoints/iter_0005000
+    hf_export: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/sft-v2-full-stage4/hf/iter_0005000
+provenance:
+  issue: 0058 (Prelude SFT v2, multi-harness: Terminus-2 + native tool calls)
+  training_summary: "intermediate export at iter 5000 (~21.0B tokens) of the SFT v2 full run (37.69B tokens, Megatron on MN5, 64 nodes, GBS 64 x 64K, LR 2e-5, from stage 4 step 1001); final = step 9020"
+  evals: "data-scaling point: evalchemy (9 jobs) + agentic SWE/TB2.1/TBLite reps 1-3, eval_moves/prelude_20261025_sft_v2_full_steps.sh"
+registered_at: "2026-10-26T12:00:00+01:00"

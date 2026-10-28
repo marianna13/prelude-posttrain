@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "prelaunch-measurements-complete-quality-failed",
+  "issue": 54,
+  "github_issue": 60,
+  "production_submitted": false,
+  "passed": [
+    "frozen data release and available allocations",
+    "finite-loader padding/gradient/resume CPU checks",
+    "eight-node 20-update 16K performance pilot and full HF readback",
+    "threshold preregistration",
+    "initialized ChatML baseline measurement"
+  ],
+  "failed": [
+    "initialized 4K RULER mean target",
+    "16K RULER and repeated-passkey targets",
+    "32K RULER and repeated-passkey targets",
+    "64K RULER and repeated-passkey targets"
+  ],
+  "format_findings": [
+    "initialized nonthinking HumanEval+ loops on tool_call; score 0/100",
+    "initialized thinking MATH has 57/100 open reasoning responses"
+  ],
+  "cause_evidence": "Matched 4K theta probe: initialized100K=100%, initialized6M=81%, smoke6M=81%, smoke100K=100%. This isolates a harmful theta change on this metric; it is not full conversion parity proof.",
+  "next_required": "Freeze a revised RoPE/context curriculum and bounded adaptation pilot; replay frozen inputs; require long-context targets and matched six-metric short-context noninferiority before production promotion.",
+  "future_post_stage_gates": [
+    "matched 4K six-metric noninferiority against historical reference",
+    "long-context target after each trained stage",
+    "ChatML format and quality after each trained stage"
+  ],
+  "all_submitted_gate_jobs_finished": true,
+  "evidence": {
+    "performance": "eight_node_evidence.json",
+    "chat": "initialized_chatml_scores.json",
+    "ruler4k": "initialized_ruler_4096_scores.json",
+    "ruler16k": "smoke_ruler_16384_scores.json",
+    "ruler32k": "smoke_ruler_32768_scores.json",
+    "ruler64k": "smoke_ruler_65536_scores.json",
+    "rope_probe": "rope_diagnostic_scores.json",
+    "paired_reference": "base_fewshot_paired_reference.json"
+  }
+}

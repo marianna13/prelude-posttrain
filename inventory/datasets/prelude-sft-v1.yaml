@@ -1,0 +1,57 @@
+schema_version: 1
+kind: dataset
+id: prelude-sft-v1
+display_name: Prelude SFT v1 (math / science / code / IF-chat / SWE), ChatML + think, 64k cap
+modality: sft
+training_use: [sft]
+rl_task_pool: false
+publication:
+  status: local-draft
+  visibility: private
+  note: rendered for prelude-9b-anneal300b-iter0989075 with the Prelude chat tokenizer; not yet published
+provenance:
+  upstream:
+    - {hf_repo: nvidia/Nemotron-SFT-Math-v4, revision: 84d42ad0cb960f07f951b9baa9ed2b46a5a18c66, subsets: [math]}
+    - {hf_repo: nvidia/Nemotron-SFT-Science-v2, revision: 6536a5021222a94126968e8c92f29ee47fc8a7df, subsets: [syn_mcq, rqa, so, vendor]}
+    - {hf_repo: nvidia/Nemotron-SFT-Instruction-Following-Chat-v3, revision: be3b3e04ef605ac9d3f8f35b9d5a632f4a3a3402, subsets: [instruction_following, chat]}
+    - {hf_repo: nvidia/Nemotron-SFT-SWE-v3.5, revision: ad64129216649f86179a759a6df65d0975c5df07, subsets: [all]}
+    - {hf_repo: nvidia/OpenCodeReasoning, revision: 20a1ca19c0d050fe9057fc08339d6b370ec1c67a, subsets: [split_0]}
+  licenses: [cc-by-4.0, cc-by-sa-4.0, odc-by, apache-2.0, mit]
+  teachers: [DeepSeek-V4-Pro, DeepSeek-V3.2, GPT-OSS-120B, Kimi-K2, GLM-5, DeepSeek-R1]
+content:
+  format: "rendered parquet {id, ids: list<int32>, loss: list<int8>, mix_source}; loss 1 = trained assistant tokens"
+  tokenizer: /p/data1/mmlaion/marianna/sft_sources/prelude_chat_tokenizer   # rl/sft/prelude/make_chat_tokenizer.py
+  chat_template_sha256: f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047
+  max_tokens: 65536
+  normalization:
+    - reasoning_content kept on assistant turns after the last user message; dropped on earlier context turns
+    - IF-Chat trains per metadata.train_turns (chat split = last assistant turn only)
+    - IF-Chat rows with withheld lmsys/WildChat prompts rejected (355,782 of 637,663)
+    - tool calls rendered Qwen3/hermes style; developer role mapped to system
+  decontamination: >-
+    index_prelude_v1 (mv 35-benchmark 13-gram index + AIME25, GPQA-D, IFEval, HumanEval+/MBPP+, MultiPL-E x8,
+    SWE-bench Verified, TB2.1, TBLite; rl/scripts/data/decontam/), any hit in prompt or answer after dropping
+    n-grams with < 7 distinct words and 241 boilerplate n-grams matching > 20 rows; 1,366 rendered rows removed
+    (mostly GSM8K/MATH/AIME items in math, IF and OCR)
+  rows: 4412306   # rendered_clean
+  rows_before_decontam: 4413672
+  tokens: 25.13B
+  trained_tokens: 23.47B
+  dropped_over_max_tokens: 74060
+  by_subset_rows: {math: 528978, ocr: 567850, science_vendor: 169459, science_so: 2105663, science_rqa: 411181, science_syn_mcq: 96600, if_chat: 281637, if_instruction_following: 249744, swe: 2560}
+  by_subset_tokens_B: {math: 5.80, ocr: 5.95, science_vendor: 4.17, science_so: 3.96, science_rqa: 3.00, science_syn_mcq: 0.13, if_chat: 1.36, if_instruction_following: 0.66, swe: 0.12}
+materialization:
+  jureca:
+    sources: /p/data1/mmlaion/marianna/sft_sources/nvidia
+    normalized: /p/data1/mmlaion/marianna/sft_mixes/prelude_sft_v1/normalized
+    rendered: /p/data1/mmlaion/marianna/sft_mixes/prelude_sft_v1/rendered          # pre-decontamination
+    rendered_clean: /p/data1/mmlaion/marianna/sft_mixes/prelude_sft_v1/rendered_clean   # USE THIS for training
+    decontam_flags: /p/data1/mmlaion/marianna/sft_mixes/prelude_sft_v1/decontam
+    summary: /p/data1/mmlaion/marianna/sft_mixes/prelude_sft_v1/summary.json
+    summary_sha256: 6a37fa832cb10c5545467d14afb6f94c9c155fdde9b505d29acdd727d6c3ad53
+  tools:
+    normalize: {path: rl/scripts/data/materialize_prelude_sft_v1.py, sha256: d87640198e2773fdcb5e172b52ce46b81bc58aa76553241f6bc0b91964adf3e4}
+    render: {path: rl/scripts/sft_gen/prerender_levanter.py, sha256: 35c65ff02f1658b1f49aee21eb4b49178b8699c35b09c861569c0c4a6d01670c}
+    build: rl/sft/prelude/build_sft_v1.sbatch
+  built_at: "2026-10-15"
+  slurm: [15715167, 15715281, 15715580, 15715618]

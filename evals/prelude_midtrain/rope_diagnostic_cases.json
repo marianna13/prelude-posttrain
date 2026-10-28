@@ -1,0 +1,18 @@
+{
+  "initialized-rope100k": {
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/base_hf",
+    "config_sha256": "426738a54096a486023b329635e745522c8076d0cc9e1545f34dbd88e71c4f97"
+  },
+  "initialized-rope6m": {
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/gates_20261018/diagnostic_models/initialized-rope6m",
+    "config_sha256": "577d747064a35ad6f5e11012cfe4a9ba437b84017bdc574b24885f63de3ab4b4"
+  },
+  "smoke16-rope6m": {
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/runs/prelude-longcontext-smoke-16k/hf/step-1",
+    "config_sha256": "b637a444ab04e89e2e5d442ba42e57a85c4130a172a1a2f57da45a1e883c236c"
+  },
+  "smoke16-rope100k": {
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/gates_20261018/diagnostic_models/smoke16-rope100k",
+    "config_sha256": "524df9e84e0c7e9d4e56d46ce4e8d44fee0480054921f039fb3262e0c2878aae"
+  }
+}

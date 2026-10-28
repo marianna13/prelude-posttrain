@@ -1,0 +1,461 @@
+{
+  "job": "47488201",
+  "training_step": "47488201.0",
+  "cluster": "mn5",
+  "status": "passed",
+  "nodes": 8,
+  "gpus": 32,
+  "completed_updates": 20,
+  "total_padded_positions": 20971520,
+  "training_step_exit_code": "0:0",
+  "elapsed": "01:06:21",
+  "qualified_runtime": "gates_20261018/runtime_smoke_v3",
+  "scope": "Performance pilot over the frozen 16K cache; final finite-loader integration is covered by separate CPU correctness gates. This is not the production training run.",
+  "schedule_horizon_used": 2862,
+  "reconciled_production_horizon": 4419,
+  "warm_steps": 18,
+  "warm_global_step_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "warm_duration_mean_s": 128.8870876570905,
+  "warm_duration_median_s": 128.66171766095795,
+  "warm_duration_min_s": 122.79479375388473,
+  "warm_duration_max_s": 134.79659800208174,
+  "warm_padded_positions_per_second": 8135.617144129911,
+  "warm_mfu_pct_mean": 1.9867536538511983,
+  "warm_loss_min": 1.5366313457489014,
+  "warm_loss_max": 1.9796380996704102,
+  "last_loss": 1.5366313457489014,
+  "all_20_losses_checked_by_runtime_nan_inf_guards": true,
+  "sampled_gpu_memory_used_mib_min": 21201.0,
+  "sampled_gpu_memory_used_mib_max": 64785.0,
+  "memory_samples": [
+    {
+      "host": "as01r5b05",
+      "index": "0",
+      "uuid": "GPU-aefa7429-7a27-0f64-c3ae-24a48794a33e",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21217 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b05",
+      "index": "1",
+      "uuid": "GPU-a1d1b912-ba34-b3ce-4f3d-c8a7c571da45",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21205 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b05",
+      "index": "2",
+      "uuid": "GPU-cb2d2771-8a57-c14b-b3e7-a6fb89255a07",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21313 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b05",
+      "index": "3",
+      "uuid": "GPU-6ebe9bf3-08b0-bafd-71e5-56c2c49f3ce7",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64767 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b12",
+      "index": "0",
+      "uuid": "GPU-af3b632d-e5ab-f768-24aa-4ddeed686f0a",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64753 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b12",
+      "index": "1",
+      "uuid": "GPU-c709178a-c2a9-5734-0b77-da2d0fd8f421",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64737 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b12",
+      "index": "2",
+      "uuid": "GPU-6ab80a92-ea9a-d72c-c9f9-658f63c87f5c",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64781 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b12",
+      "index": "3",
+      "uuid": "GPU-be2c060d-ff0f-a78b-4f7c-446bd7f366dd",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64717 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b07",
+      "index": "0",
+      "uuid": "GPU-23d2063f-9728-a035-f0a9-bd77f16c8c26",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21281 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b07",
+      "index": "1",
+      "uuid": "GPU-fc46ee75-ed4e-a774-9558-7e941a7aec33",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21201 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b07",
+      "index": "2",
+      "uuid": "GPU-5c69349f-5cfd-02f2-1289-c752d2d416c6",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21245 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b07",
+      "index": "3",
+      "uuid": "GPU-b29b495b-8ea4-130c-d5b0-f6ecd178ce64",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64765 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b06",
+      "index": "0",
+      "uuid": "GPU-d6196607-d6f9-2146-9eef-908e5dc8a4bb",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21217 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b06",
+      "index": "1",
+      "uuid": "GPU-2519b14c-29f2-34ab-2481-b7f0845b6a84",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21201 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b06",
+      "index": "2",
+      "uuid": "GPU-b2dbaaed-7c14-c9db-4ab7-60007e265d23",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21245 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b06",
+      "index": "3",
+      "uuid": "GPU-8d8d8d0a-4716-be15-3e2e-6c232026ef39",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21213 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b03",
+      "index": "0",
+      "uuid": "GPU-7e18d361-c436-150f-86f8-38e288497c99",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64785 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b03",
+      "index": "1",
+      "uuid": "GPU-ab58c853-231f-7c45-05f7-28a4c60fec67",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64737 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b03",
+      "index": "2",
+      "uuid": "GPU-f79cf631-ccf9-71b5-fe70-fbf7842ac844",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64781 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b03",
+      "index": "3",
+      "uuid": "GPU-f385124f-698f-3b07-15e5-694f45901f6d",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64685 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b09",
+      "index": "0",
+      "uuid": "GPU-99a380d4-dbcc-abdd-df27-b8e4a668dbb8",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21217 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b09",
+      "index": "1",
+      "uuid": "GPU-f13e8bca-262a-df8f-b4e2-51d1c3658768",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21249 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b09",
+      "index": "2",
+      "uuid": "GPU-3d5ff6a8-700a-e275-4564-05617d150810",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21245 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b09",
+      "index": "3",
+      "uuid": "GPU-e670c568-ef71-37f3-e486-90c817ee360f",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64765 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b11",
+      "index": "0",
+      "uuid": "GPU-df4b289b-88c9-ee01-38d5-49059eea01fe",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21217 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b11",
+      "index": "1",
+      "uuid": "GPU-ecfd09cf-75b3-b3fa-3eb3-51d954b1acf0",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21201 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b11",
+      "index": "2",
+      "uuid": "GPU-aa7c055f-51f5-e387-b5cb-c473f9e4945a",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21309 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b11",
+      "index": "3",
+      "uuid": "GPU-11e048e3-69bf-a78c-c7aa-8daf47174b1f",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64765 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b04",
+      "index": "0",
+      "uuid": "GPU-0698319a-4af9-b9bb-8a12-ce72516b184f",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21217 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b04",
+      "index": "1",
+      "uuid": "GPU-05042951-8f0e-f63c-092a-11041a61f3b6",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21265 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b04",
+      "index": "2",
+      "uuid": "GPU-52dcbf8e-ccf9-ceb3-cfc4-a4d4a2eb6209",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "21245 MiB",
+      "utilization.gpu [%]": "100 %"
+    },
+    {
+      "host": "as01r5b04",
+      "index": "3",
+      "uuid": "GPU-28b681b2-4e80-d096-a850-be803cbf7169",
+      "memory.total [MiB]": "65247 MiB",
+      "memory.used [MiB]": "64765 MiB",
+      "utilization.gpu [%]": "100 %"
+    }
+  ],
+  "hf_verification": {
+    "status": "passed",
+    "export": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/runs/prelude-gate-eight-node-16k-v3/hf/step-19",
+    "native": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/runs/prelude-gate-eight-node-16k-v3/checkpoints/step-19",
+    "config": {
+      "_name_or_path": "",
+      "architectures": [
+        "Qwen3ForCausalLM"
+      ],
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "begin_suppress_tokens": [
+        262144,
+        1,
+        262146
+      ],
+      "bos_token_id": 1,
+      "chunk_size_feed_forward": 0,
+      "decoder_start_token_id": 1,
+      "dtype": null,
+      "eos_token_id": [
+        262146,
+        2
+      ],
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 4096,
+      "id2label": {
+        "0": "LABEL_0",
+        "1": "LABEL_1"
+      },
+      "initializer_range": 0.02,
+      "intermediate_size": 12288,
+      "is_encoder_decoder": false,
+      "label2id": {
+        "LABEL_0": 0,
+        "LABEL_1": 1
+      },
+      "layer_types": [
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention",
+        "full_attention"
+      ],
+      "max_position_embeddings": 65536,
+      "max_window_layers": 28,
+      "model_type": "qwen3",
+      "no_bias": true,
+      "num_attention_heads": 32,
+      "num_hidden_layers": 36,
+      "num_key_value_heads": 8,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "pad_token_id": 262144,
+      "problem_type": null,
+      "return_dict": true,
+      "rms_norm_eps": 1e-05,
+      "rope_parameters": {
+        "rope_theta": 6000000.0,
+        "rope_type": "default"
+      },
+      "rope_scaling": null,
+      "rope_theta": 6000000.0,
+      "sliding_window": null,
+      "tie_word_embeddings": false,
+      "transformers_version": "5.12.1",
+      "use_cache": true,
+      "use_sliding_window": false,
+      "vocab_size": 262272
+    },
+    "tensors": 399,
+    "parameters": 9094607872,
+    "all_weights_finite": true,
+    "tokenizer_contract_matches": true,
+    "added_row_max_abs_change": {
+      "model.embed_tokens.weight": [
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05
+      ],
+      "lm_head.weight": [
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05,
+        3.0517578125e-05,
+        4.76837158203125e-07,
+        4.76837158203125e-07
+      ]
+    },
+    "native_metadata": {
+      "step": 19,
+      "timestamp": "2026-10-18T16:12:35.072740",
+      "is_temporary": false
+    }
+  },
+  "diagnostic_step_note": "Non-training scratch-path probes .2/.3 failed, and preservation step .8 was terminated at normal job completion. All 32 training ranks in step .0 completed successfully.",
+  "runtime_source_sha256": {
+    "rl/scripts/data/prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "rl/scripts/data/prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716",
+    "rl/sft/levanter/scripts_grug/grug_datakit_chat.py": "c83d78b0000b05334c3404f1bfad76635271b7160f499c860be4149cec2cc179",
+    "rl/sft/levanter/scripts_grug/sft_main.py": "d93bebc3b735a73577a8744e2c36c482186ed82cf29a620fe824891ff6db49b3",
+    "rl/sft/prelude/midtrain_format.py": "5a108af4f0a90ebdd730db48a9d1c0ea02117a11407a07e0d49f029e9b6668fc",
+    "rl/sft/prelude/prepare_midtrain_levanter.py": "c2b9fc54744b96261fc91e53dd2ef09d93862618a99055d9e07cd24f61559276",
+    "rl/sft/prelude/prepare_midtrain_tokenizer.py": "ae68cb4534b1a355470e83691fa6e827af49cda0b9afc09e53a68518d72f4b30",
+    "rl/sft/prelude/qwen3_fa4.py": "0682bfdc0bf6efe6abdb545fd069ca6cf7edb172e3b06f86136b0ef2440d06f0",
+    "rl/sft/prelude/smoke_midtrain_training.py": "06530f9f532f0114f3372472d5b3c19ee7c4dbc4c42625f482dd8e806905e8a0"
+  },
+  "finite_runtime_candidate_source_sha256": {
+    "rl/scripts/data/prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "rl/scripts/data/prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716",
+    "rl/sft/levanter/scripts_grug/grug_datakit_chat.py": "c83d78b0000b05334c3404f1bfad76635271b7160f499c860be4149cec2cc179",
+    "rl/sft/levanter/scripts_grug/sft_main.py": "7ea708d1e568c79c5379b3824ebf8c594324b563e2ac34d22bbf41f3fc3e6297",
+    "rl/sft/prelude/finite_stage.py": "abfdaa88de493ecdf5da4f6002cfa648b8263546b6ddcfb7462fc420308a997d",
+    "rl/sft/prelude/midtrain_format.py": "5a108af4f0a90ebdd730db48a9d1c0ea02117a11407a07e0d49f029e9b6668fc",
+    "rl/sft/prelude/prepare_midtrain_levanter.py": "c2b9fc54744b96261fc91e53dd2ef09d93862618a99055d9e07cd24f61559276",
+    "rl/sft/prelude/prepare_midtrain_tokenizer.py": "ae68cb4534b1a355470e83691fa6e827af49cda0b9afc09e53a68518d72f4b30",
+    "rl/sft/prelude/qwen3_fa4.py": "0682bfdc0bf6efe6abdb545fd069ca6cf7edb172e3b06f86136b0ef2440d06f0",
+    "rl/sft/prelude/smoke_midtrain_training.py": "06530f9f532f0114f3372472d5b3c19ee7c4dbc4c42625f482dd8e806905e8a0"
+  }
+}

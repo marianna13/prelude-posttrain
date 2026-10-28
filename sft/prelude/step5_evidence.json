@@ -1,0 +1,922 @@
+{
+  "artifact_bytes": 5570423420,
+  "checks": {
+    "all_parent_selections_exact": true,
+    "all_source_stage_counts_match": true,
+    "continuation_overlap_and_mask": true,
+    "no_implicit_truncation_or_resampling": true,
+    "parent_ids_and_loss_reconstructed": true,
+    "read_back_every_token_and_mask": true
+  },
+  "cpu_qualification": {
+    "array_cache_parity": {
+      "results": {
+        "arrays": {
+          "counts": {
+            "rows": 14274,
+            "seen_tokens": 33554527,
+            "trainable_tokens": 33536413,
+            "zero_target_rows": 0
+          },
+          "seconds": 2.5067180139012635,
+          "sha256": {
+            "assistant_masks": "789b057b52b8395048a3ad04bbe2d73d78e1b223389c4529314ba2b165c747ca",
+            "input_ids": "30f7721f4fc738ac37a1e1f6730082bfd390e038cdb32bcdebf28e5de1bdd583"
+          }
+        },
+        "lists": {
+          "counts": {
+            "rows": 14274,
+            "seen_tokens": 33554527,
+            "trainable_tokens": 33536413,
+            "zero_target_rows": 0
+          },
+          "seconds": 34.7443523700349,
+          "sha256": {
+            "assistant_masks": "789b057b52b8395048a3ad04bbe2d73d78e1b223389c4529314ba2b165c747ca",
+            "input_ids": "30f7721f4fc738ac37a1e1f6730082bfd390e038cdb32bcdebf28e5de1bdd583"
+          }
+        }
+      },
+      "status": "passed"
+    },
+    "array_cache_parity_job": "15719313",
+    "array_loader_reports_identical": true,
+    "array_loader_smoke_job": "15719314",
+    "bulk_cache_batch_parity": {
+      "results": {
+        "bulk": {
+          "counts": {
+            "rows": 1198,
+            "seen_tokens": 8396926,
+            "trainable_tokens": 8392912,
+            "zero_target_rows": 0
+          },
+          "seconds": 0.6542755110021972,
+          "sha256": {
+            "assistant_masks": "55b6dcb8de798055df88b45a522931cb49e010f7fd7aed970178992510cce3a2",
+            "input_ids": "c5509856976c060954ccd414f27f1e9e4f78e53f82d3ac2c41ee7e082bbccaf4"
+          }
+        },
+        "small": {
+          "counts": {
+            "rows": 1198,
+            "seen_tokens": 8396926,
+            "trainable_tokens": 8392912,
+            "zero_target_rows": 0
+          },
+          "seconds": 2.9492157230015437,
+          "sha256": {
+            "assistant_masks": "55b6dcb8de798055df88b45a522931cb49e010f7fd7aed970178992510cce3a2",
+            "input_ids": "c5509856976c060954ccd414f27f1e9e4f78e53f82d3ac2c41ee7e082bbccaf4"
+          }
+        }
+      },
+      "status": "passed"
+    },
+    "bulk_cache_batch_parity_job": "15719284",
+    "bulk_loader_reports_identical": true,
+    "bulk_loader_smoke_job": "15719283",
+    "export_tests": 6,
+    "full_trainer_fresh_job": "15719257",
+    "full_trainer_resume_job": "15719268",
+    "full_trainer_resumed_from_step": 2,
+    "loader_smokes": {
+      "16384": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 16384,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 288824,
+          "trainable_tokens": 286584,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 23,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      },
+      "32768": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 32768,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 577104,
+          "trainable_tokens": 551499,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 23,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      },
+      "65536": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 65536,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 1038241,
+          "trainable_tokens": 986848,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 22,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      }
+    },
+    "loader_tests": 8,
+    "resume_fix": "Prelude-only padded 262272 vocabulary axis for native checkpoint exemplars; tokenizer remains 262151; fresh import and export preserve all model rows",
+    "tiny_training": {
+      "added_token_gradient_norms": {
+        "embedding": [
+          24.152061462402344,
+          61.72902297973633,
+          18.708223342895508,
+          15.849405288696289,
+          0.5581026077270508,
+          0.5275668501853943
+        ],
+        "head": [
+          0.2431267648935318,
+          0.1816251128911972,
+          0.07134046405553818,
+          0.07134215533733368,
+          7.030823780951323e-06,
+          7.030823780951323e-06
+        ]
+      },
+      "checks": [
+        "mixed formats through real cache and packer",
+        "finite Adam updates",
+        "all six added embedding/head rows have gradients",
+        "native model+optimizer checkpoint reload",
+        "bit-identical resumed second update",
+        "HF export/reimport exact model leaves",
+        "frozen tokenizer and padded vocabulary retained"
+      ],
+      "context": 128,
+      "counts": {
+        "rows": 2,
+        "seen_tokens": 68,
+        "trainable_tokens": 56,
+        "zero_target_rows": 0
+      },
+      "loss": [
+        12.465394973754883,
+        12.454195022583008
+      ],
+      "scope": "Tiny Qwen3 CPU correctness only; actual 9B target qualification is recorded under mn5.gpu_canary.",
+      "script_sha256": "06530f9f532f0114f3372472d5b3c19ee7c4dbc4c42625f482dd8e806905e8a0",
+      "status": "passed",
+      "zero_mask_loss": 0.0
+    }
+  },
+  "data_shards": 26103,
+  "date": "2026-10-17",
+  "export_build_id": "5469aecd86ad27a86f22f093e95e7fe0037cb0db7d2f8e7fb69736dbd19540c8",
+  "export_input_manifest_sha256": "88b470e2defde1be52c93d207d52daa1b92b15a16488d3054d52eea608e43150",
+  "handoff": {
+    "build_id": "1f4010423b1480d2df706176af9c8f64e4de2eca7e687d7740e24845dcec0665",
+    "manifest_sha256": "6bb1f268507b71078f98d2679ddc2bb0e3f4c624725e9da5e651b139bfa382d9",
+    "root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/mn5_bundle",
+    "v2_build_id": "0a8431251b607000d5b5ae1f432125c911fdbc2997e79e07c578f514fbe3abba",
+    "v2_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/mn5_bundle_v2",
+    "v3_build_id": "36195f2757717d33a588dc065d8e35111416b4969a42e79987509336cd376605",
+    "v3_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/mn5_bundle_v3"
+  },
+  "job_accounting": [
+    "15719227|prelude-token-export|synthlaion|COMPLETED|0:0|00:08:48|256|1",
+    "15719238|prelude-loader-cpu|synthlaion|COMPLETED|0:0|00:01:04|256|1",
+    "15719240|prelude-token-export|synthlaion|COMPLETED|0:0|00:01:02|256|1",
+    "15719243|wrap|synthlaion|COMPLETED|0:0|00:00:14|256|1",
+    "15719244|prelude-token-export|synthlaion|COMPLETED|0:0|00:02:35|1024|4",
+    "15719245|prelude-export-audit|synthlaion|COMPLETED|0:0|00:04:00|1024|4",
+    "15719257|prelude-trainer-cpu|synthlaion|COMPLETED|0:0|00:01:13|256|1",
+    "15719268|prelude-trainer-cpu|synthlaion|COMPLETED|0:0|00:00:58|256|1",
+    "15719271|prelude-loader-cpu|synthlaion|COMPLETED|0:0|00:01:11|256|1",
+    "15719272|prelude-loader-cpu|synthlaion|COMPLETED|0:0|00:01:05|256|1"
+  ],
+  "jobs": {
+    "audit": "15719245",
+    "export": "15719244",
+    "loader_release": "15719271",
+    "loader_tests": "15719272",
+    "pilot": "15719240",
+    "pilot_audit": "15719243",
+    "prepare": "15719227",
+    "tiny_training": "15719238",
+    "trainer_cpu": "15719257",
+    "trainer_cpu_resume": "15719268"
+  },
+  "mixture_build_id": "7239c4ca51352ad5bafc4565cb0675b1ebdb73549fcf92c37401c4f71f493f1b",
+  "mn5": {
+    "attention_backend_note": "Actual MN5 9B canary selected reference attention because transformer_engine is absent. Long-context fused attention and memory/runtime qualification remain a step 6 gate.",
+    "cache_import_launcher_sha256": "7928d06577caf87e7143dcd0d21e8a88983ff897c06a5213f1aee0b6bb47f71c",
+    "cache_root": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/cache_v3",
+    "container_byte_identical_verified": true,
+    "container_sha256": "b22c005916883c27ba697fd82c8973cd5f28c115eb96bddac4ac46da47ca9c7a",
+    "evidence_copy_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/mn5_evidence",
+    "evidence_sha256": {
+      "cache_v3/16384/import_counts.json": "ba49a3ccbef68f7c26ff945e47b603b25a0132a4f8c355ff6dd5c2b04e44057b",
+      "cache_v3/16384/stage_loader.json": "b9c097580bdab678d03ad0e54bceb3c42cc41046282dea0f9b8de68b6c90ce6b",
+      "cache_v3/32768/import_counts.json": "0e4d2ef8627ae80f3ba5ee5d39865dba14339f37766bdbcef1bb91e4a57379b4",
+      "cache_v3/32768/stage_loader.json": "5b00dc3739295c8e94a41280d47b7800fd39516d82064873c8c6841fc035deb8",
+      "cache_v3/65536/import_counts.json": "24cb33e015ca739a78c7635bf14cfb1e1a079c83c37499c530acd7a818d5c7a4",
+      "cache_v3/65536/stage_loader.json": "2849d26dc7fbc4f80a6353f5c544c9c1cd9f388a3c772a7364f25e7727fa61ad",
+      "files.txt": "714d937031357af7c63a6e5f7b4b0f83e22812137f89d2824bcbd9010bb5cb8a",
+      "import_all_v3.sbatch": "7928d06577caf87e7143dcd0d21e8a88983ff897c06a5213f1aee0b6bb47f71c",
+      "loader_smoke_v3/16384/smoke.json": "373f20b2bdb833cc6c52a8d377a9ea417f860047f7378533a395ef1a1d442d2b",
+      "loader_smoke_v3/32768/smoke.json": "c55ca1965c46172f032b838da5e28f7be302f534cda1afe64a857cf4cf1a5b04",
+      "loader_smoke_v3/65536/smoke.json": "9d031ecdcb6932a104851f9b58c800a196b00da60011842f86d261e2cc3e2dcd",
+      "logs/cache-v3-47456439-0.log": "2701f1222f2cbc443f8de726424098b7e7938f0509b78db7cd6fecf118c0f70e",
+      "logs/cache-v3-47456439-1.log": "4bdca2c361447c60d3199550bacf1ffd8a2eb28dbb56a68b5d39e0bba76fe3fb",
+      "logs/cache-v3-47456439-2.log": "94bbbc22dfd178afa08d071ae337c2bc9577add8fc8dd45633b2e1154ee77b9f",
+      "logs/gpu-smoke-47456121.log": "3badb767e1b5329aade70e146ca56a6ab136b3415a16f59ae78ba661c03f2acf",
+      "logs/handoff-v3-checksums.log": "cf3df3fcf2d6671eac7e1b7e5c1e3beed8d27dd00dfeab845caceb763d1334e5",
+      "logs/verify-final-47456853.log": "3f3e39ce1662420635ecf53d4a7f6eab7abae48960a0ef553a6264308905b15e",
+      "target_evidence/gpu_loss_check.json": "b13f4694037f0a0917a09e577663bc016238ddfe47676e2a7ac403941a0a605a",
+      "target_evidence/gpu_metrics.json": "792b73ae1d7e54c44906b167f813916d0c97ee3bb9451960e6ebe9e1d3eb40a1",
+      "target_evidence/hf_step_1.json": "5999071dd8a9d128a89f32ace26c4565b1d4c855f69c87926822edce61c37bdc",
+      "target_evidence/hf_step_2.json": "b6272491c9446cd8188efdb7c2131555db588fbe0f55f7bbfc8d4c18f7a1e200",
+      "target_evidence/job_accounting.txt": "ffffc4f99d9235cc2daf25a47d02c086b661398f2caefa583a6c086be68478f3",
+      "target_evidence/verification_sources.sha256": "8e0db79eae0fdc228f4e93fbb64f4c11faa49ec96e92907286dfc3f7508594f8",
+      "target_evidence/wandb_records/offline-run-20261017_215349-prelude-9b-midtrain-loader-smoke.wandb": "b428c7bdd5f349e43b3cfe7f6fb15886be98e2b8d52286c96214046487dbe4ef",
+      "target_evidence/wandb_records/offline-run-20261017_221643-prelude-9b-midtrain-loader-smoke.wandb": "f662823099460bdfbee01c7c898f12f4e143bf37e5a36423ab359fb325d7fb11"
+    },
+    "gpu_canary": {
+      "batch_size": 4,
+      "context": 128,
+      "fresh_updates": 2,
+      "gpu_count": 4,
+      "gpu_type": "H100",
+      "hf_exports": {
+        "1": {
+          "added_row_max_abs_change": {
+            "lm_head.weight": [
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              7.62939453125e-06,
+              7.62939453125e-06
+            ],
+            "model.embed_tokens.weight": [
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05
+            ]
+          },
+          "all_exported_weights_finite": true,
+          "eos_token_ids": [
+            262146,
+            2
+          ],
+          "native_checkpoint": {
+            "is_temporary": false,
+            "step": 1,
+            "timestamp": "2026-10-17T22:15:13.673074"
+          },
+          "parameters": 9094607872,
+          "path": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/smoke_9b_gpu/hf/step-1",
+          "status": "passed",
+          "step": 1,
+          "tensor_names_and_shapes_match_base": true,
+          "tensors": 399,
+          "tokenizer_files_sha256": {
+            "added_tokens.json": "8301006588f1bee825ad0e2ea54a3dadf08f80dceb1804e5c6a177bf0812d08c",
+            "chat_template.jinja": "f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047",
+            "chat_tokenizer_manifest.json": "b30a0433077da36c0b65ff4a3038abfeb59c1744c937c89e06682bef458daab5",
+            "generation_config.json": "164adeaae503cbada3375648ee9f1b0ac0fb8cdb255e75a2d33c7ae112ea6f48",
+            "special_tokens_map.json": "77af85821647a9fafb392117e91f3ebc2a9fcfbf9637bf74ba113621df47ba66",
+            "tokenizer.json": "673fb4ba274ff03cf9d5fd18d4b6d09a10ab40a3f2835490d9f43916031fa856",
+            "tokenizer.model": "ac214401227404105817141c21c6693e3b17c878465a42765d2c345310e003ce",
+            "tokenizer_config.json": "68d5292f8e261cc98638aa4b1c5ba95170accdcee9725fd92feaa43a9a35a699"
+          },
+          "vocab_size": 262272
+        },
+        "2": {
+          "added_row_max_abs_change": {
+            "lm_head.weight": [
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              1.52587890625e-05,
+              1.52587890625e-05
+            ],
+            "model.embed_tokens.weight": [
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05,
+              3.0517578125e-05
+            ]
+          },
+          "all_exported_weights_finite": true,
+          "eos_token_ids": [
+            262146,
+            2
+          ],
+          "native_checkpoint": {
+            "is_temporary": false,
+            "step": 2,
+            "timestamp": "2026-10-17T22:26:26.521707"
+          },
+          "parameters": 9094607872,
+          "path": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/smoke_9b_gpu/hf/step-2",
+          "status": "passed",
+          "step": 2,
+          "tensor_names_and_shapes_match_base": true,
+          "tensors": 399,
+          "tokenizer_files_sha256": {
+            "added_tokens.json": "8301006588f1bee825ad0e2ea54a3dadf08f80dceb1804e5c6a177bf0812d08c",
+            "chat_template.jinja": "f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047",
+            "chat_tokenizer_manifest.json": "b30a0433077da36c0b65ff4a3038abfeb59c1744c937c89e06682bef458daab5",
+            "generation_config.json": "164adeaae503cbada3375648ee9f1b0ac0fb8cdb255e75a2d33c7ae112ea6f48",
+            "special_tokens_map.json": "77af85821647a9fafb392117e91f3ebc2a9fcfbf9637bf74ba113621df47ba66",
+            "tokenizer.json": "673fb4ba274ff03cf9d5fd18d4b6d09a10ab40a3f2835490d9f43916031fa856",
+            "tokenizer.model": "ac214401227404105817141c21c6693e3b17c878465a42765d2c345310e003ce",
+            "tokenizer_config.json": "68d5292f8e261cc98638aa4b1c5ba95170accdcee9725fd92feaa43a9a35a699"
+          },
+          "vocab_size": 262272
+        }
+      },
+      "loss_by_native_step": {
+        "1": 5.783627510070801,
+        "2": 5.223718166351318
+      },
+      "parameters": 9094607872,
+      "restore_seconds": 25.3,
+      "restored_model_optimizer_gib": 101.64,
+      "resumed_from_step": 2,
+      "resumed_updates": 1,
+      "scope": "Synthetic mixed-format loader/trainer correctness only; production data allocations, long-context recipe and evaluations remain step 6.",
+      "status": "passed"
+    },
+    "gpu_canary_handoff_root": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/handoff_v2",
+    "gpu_canary_job": "47456121",
+    "gpu_canary_readback_job": "47456853",
+    "gpu_canary_verified": true,
+    "gpu_hf_verifier": {
+      "repository": "rl/sft/prelude/verify_midtrain_hf.py",
+      "sha256": "0563c90342bf5aad7de298426d62918561d0890a110a20756a6d49ca1556baac",
+      "snapshot": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/verify_mn5_hf.py"
+    },
+    "handoff_checksums_verified": true,
+    "handoff_root": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/handoff_v3",
+    "job_accounting": [
+      "47456121|prelude-9b-smoke|ehpc532|acc_debug|COMPLETED|0:0|00:34:34|160|1",
+      "47456439|prelude-cache-v3|ehpc1048|gp_debug|COMPLETED|0:0|00:04:38|32|1",
+      "47456853|prelude-9b-readback|ehpc1048|gp_debug|COMPLETED|0:0|00:00:36|8|1"
+    ],
+    "jupiter_auth_check": "VM jupiter alias resolves to login01.jupiter.fz-juelich.de; noninteractive public-key authentication denied in this session; completed initial transfer unaffected",
+    "loader_smoke_root": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/loader_smoke_v3",
+    "loader_smokes": {
+      "16384": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 16384,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 288824,
+          "trainable_tokens": 286584,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 23,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      },
+      "32768": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 32768,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 577104,
+          "trainable_tokens": 551499,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 23,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      },
+      "65536": {
+        "checks": [
+          "exact IDs/masks",
+          "one causal shift",
+          "padding",
+          "segment boundaries",
+          "all nonzero source pools",
+          "finite packing and bijective shuffle",
+          "cache relocation"
+        ],
+        "context": 65536,
+        "continuation_covered": true,
+        "counts": {
+          "rows": 50,
+          "seen_tokens": 1038241,
+          "trainable_tokens": 986848,
+          "zero_target_rows": 0
+        },
+        "packed_sequences": 22,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 50,
+        "source_pools": [
+          "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl",
+          "FinePDFs-EU-replay/pdf_multilingual/ces_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/dan_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/deu_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ell_Grek",
+          "FinePDFs-EU-replay/pdf_multilingual/fin_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/fra_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/gle_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/hun_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ita_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lit_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/nld_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/pol_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/por_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/ron_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slk_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/slv_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/spa_Latn",
+          "FinePDFs-EU-replay/pdf_multilingual/swe_Latn",
+          "FinePDFs-English-long/long_documents",
+          "FinePDFs-English-replay/pdf_english",
+          "Nemotron-CC-original-high/nemotron_english",
+          "Nemotron-Cascade-2-SFT-Data/chat",
+          "Nemotron-Cascade-2-SFT-Data/instruction_following",
+          "Nemotron-Cascade-2-SFT-Data/math",
+          "Nemotron-Cascade-2-SFT-Data/science",
+          "Nemotron-Cascade-2-SFT-Data/swe",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+          "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+          "Nemotron-Terminal-Corpus",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+          "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+          "dclm-baseline-1.0/dclm_english",
+          "stack-v3-train/data/long_documents"
+        ],
+        "status": "passed",
+        "versions": {
+          "jax": "0.11.2",
+          "pyarrow": "23.0.1",
+          "tokenizers": "0.22.2",
+          "transformers": "5.12.1"
+        },
+        "zero_target_chunk_covered": false
+      }
+    },
+    "loader_smokes_verified": true,
+    "model_checksums_verified": true,
+    "native_cache_job_accounting": "47456439|COMPLETED|0:0|00:04:38|32|1",
+    "native_cache_jobs": [
+      "47456439"
+    ],
+    "native_cache_stages": {
+      "16384": {
+        "exhaustion": "stop; final training batch must be padded, never repeat parents",
+        "finite": true,
+        "packed_sequences": 38791,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 190524,
+        "seen_tokens": 499918595,
+        "shuffle_seed": 20261017,
+        "trainable_tokens": 489184884,
+        "zero_target_rows": 0
+      },
+      "32768": {
+        "exhaustion": "stop; final training batch must be padded, never repeat parents",
+        "finite": true,
+        "packed_sequences": 38825,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 352809,
+        "seen_tokens": 999867143,
+        "shuffle_seed": 20261017,
+        "trainable_tokens": 973966082,
+        "zero_target_rows": 0
+      },
+      "65536": {
+        "exhaustion": "stop; final training batch must be padded, never repeat parents",
+        "finite": true,
+        "packed_sequences": 41554,
+        "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+        "rows": 680808,
+        "seen_tokens": 1999735426,
+        "shuffle_seed": 20261017,
+        "trainable_tokens": 1935346645,
+        "zero_target_rows": 0
+      }
+    },
+    "native_caches_verified": true,
+    "preferred_bulk_transfer_route": "SSH from jsc-vm to Jupiter, then run ~/bin/rclone with the existing mn5: remote on Jupiter; bulk bytes flow directly Jupiter to MN5",
+    "production_training_has_run": false,
+    "release_checksums_verified": true,
+    "root": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1",
+    "superseded_native_cache_jobs": {
+      "47455264": "intentionally cancelled for bulk cache batching; partial cache/ outputs preserved",
+      "47456106": "V2: 16K completed and passed full counts/loader; 32K import superseded by faster parity-qualified V3; pending 64K cancelled before start. All prior outputs preserved."
+    },
+    "transfer_route": "SSH ProxyJump jsc-vm to transfer3.bsc.es/glogin2.bsc.es",
+    "transfer_route_note": "Initial transfer completed through jsc-vm; all destination checksums passed. User prefers Jupiter for subsequent bulk transfers."
+  },
+  "release_build_id": "e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819",
+  "release_manifest_sha256": "1acbb7b946512f3a25708e05ca1f84178d04e2e3c3c980ea99c4af276aaa7e1a",
+  "root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5",
+  "schema_version": 1,
+  "scope": "Portable token export, independent full read-back, full MN5 native caches, CPU/target loader correctness and 9B synthetic fresh/resume/HF export qualified. Production long-context recipe, finite final-batch scheduling and evaluations remain step 6.",
+  "source_commit": "fd8313bf5a6d2c78a202dd0e1752dc6d65734450",
+  "stages": [
+    {
+      "chunks": 190524,
+      "context": 16384,
+      "original_tokens": 498908842,
+      "parents": 186595,
+      "seen_tokens": 499918595,
+      "trainable_tokens": 489184884,
+      "zero_target_chunks": 0
+    },
+    {
+      "chunks": 352809,
+      "context": 32768,
+      "original_tokens": 998570578,
+      "parents": 347764,
+      "seen_tokens": 999867143,
+      "trainable_tokens": 973966082,
+      "zero_target_chunks": 0
+    },
+    {
+      "chunks": 680808,
+      "context": 65536,
+      "original_tokens": 1997850331,
+      "parents": 673473,
+      "seen_tokens": 1999735426,
+      "trainable_tokens": 1935346645,
+      "zero_target_chunks": 0
+    }
+  ],
+  "status": "step5-complete",
+  "totals": {
+    "chunks": 1224141,
+    "original_tokens": 3495329751,
+    "parents": 1207832,
+    "seen_tokens": 3499521164,
+    "trainable_tokens": 3398497611,
+    "zero_target_chunks": 0
+  }
+}

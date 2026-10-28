@@ -1,0 +1,230 @@
+schema_version: 1
+kind: dataset
+id: agenttrove-sft-traces-v1
+display_name: AgentTrove SFT traces v1
+modality: sft
+training_use: [sft]
+rl_task_pool: false
+publication:
+  status: published
+  visibility: public
+  hf_repo: open-thoughts/AgentTrove
+  revision: b395a4307a2bc9950a90dc899438f149e115fc60
+  url: https://huggingface.co/datasets/open-thoughts/AgentTrove/tree/b395a4307a2bc9950a90dc899438f149e115fc60
+  card_claimed_rows: 1696847
+provenance:
+  upstream:
+    hf_repo: open-thoughts/AgentTrove
+    revision: b395a4307a2bc9950a90dc899438f149e115fc60
+  assembled_from: 219 OpenThoughts-Agent source datasets (Harbor + terminus-2 generation)
+  license: apache-2.0
+  teachers:
+    - GLM-4.7
+    - GPT 5.1 Nano
+    - GLM-4.6
+    - GPT-5-mini
+    - GPT-5-nano
+    - GPT-OSS-120B
+    - Qwen3
+    - GPT-5
+    - GPT-4o
+    - MiniMax M2.0
+    - Kimi K2.0 Thinking
+    - Kimi-2.5
+    - GLM-5.0
+    - Gemini-2.5-Flash
+content:
+  task_format: terminus2_traces
+  modality: sft
+  sample_unit: full agent trajectory
+  conversations_column: conversations
+  conversations_shape: "list[{role: user|assistant, content: string}]"
+  role_model: terminus-2 inline JSON actions (NOT OpenAI tool_calls; tool role unused)
+  published_row_count: 1696847
+  parquet_shard_count: 38
+  # README schema is wrong on three points (verified 2026-09-25):
+  # - column is `conversations`, not `messages`
+  # - there is no `reward` column (0/1,696,847 rows)
+  # - identity is `trial_name` + `run_id` + `episode`, not `task_id`
+  schema_actual_columns:
+    - conversations
+    - agent
+    - model
+    - date
+    - task
+    - episode
+    - run_id
+    - trial_name
+    - model_provider
+    - original_source
+    - original_teacher
+    - result
+    - trace_source
+    - path
+    - task_binary
+    - instruction
+    - verifier_output
+    - ground_truth
+    - judgment
+    - __index_level_0__
+    - split
+  audit:
+    tool: rl/scripts/data/audit_agenttrove_sft.py
+    tool_sha256: d6cd0e1ecf3bbec26894965791886d5ce6a2ceeeb714ee20d99ea6a2809b3bc5
+    summary: /e/data1/datasets/playground/ot/agenttrove-sft-v1/audit_summary.json
+    issues_jsonl: /e/data1/datasets/playground/ot/agenttrove-sft-v1/audit_issues.jsonl
+    audited_at: "2026-09-25"
+    null_conversations: 128435
+    null_conversations_pct: 7.57
+    null_conversations_sources: {exp_rle: 60000, exp_rpt: 58845, unknown: 9590}
+    empty_conversations: 0
+    rows_without_assistant: 0
+    empty_assistant_turn_rows: 50
+    format_issue_rate_pct: 0.003
+    identical_duplicate_rows_dropped: 214593
+    same_key_different_content_rows: 118611
+    unique_kept_first_per_key: 1235208
+    distinct_content_rows: 1353819
+    usable_unique_pct_of_published: 72.80
+    reward_column_present_rows: 0
+    result_column_present_rows: 218706
+    result_success_or_1_rows: 14988
+    result_success_pct_of_usable: 1.21
+    result_error_top: {AgentTimeoutError: 177268, DaytonaNotFoundError: 9909, DaytonaError: 7277, AgentEnvironmentTimeoutError: 3102}
+    behaviour_coverage_on_usable:
+      has_task_complete_pct: 99.37
+      all_assistant_json_like_pct: 93.83
+      recovery_ish_user_error_text_pct: 39.42
+      has_tool_role_turn_pct: 0.0
+    turns: {min: 2, p50: 14, p75: 20, p90: 40, p99: 78, max: 906, mean: 18.0}
+    chars_per_row: {min: 306, p50: 30238, p75: 52740, p90: 78529, p99: 148028, max: 2104663, mean: 38462}
+  source_counts_usable_unique:
+    exp_tas: 349333
+    freelancer: 235094
+    stack_exchange: 118528
+    swesmith: 59890
+    neulab: 55200
+    taskmaster: 46694
+    nl2bash: 40792
+    unknown: 40363
+    r2egym: 32555
+    codeforces: 30029
+    puzzles: 28868
+    code_contests: 25924
+    Inferred Bugs: 25058
+    StackExchange Overflow: 23404
+    staqc: 19102
+    Qasper: 16305
+    defects 4j: 15806
+    repo scaffold: 10024
+    bash textbook: 9998
+    math: 9994
+    multifile composition: 9899
+    Glaive Code Assistant: 9643
+    Self-Instruct Naive: 9626
+    Nemotron Prism: 6931
+    SWEGym: 4071
+    WikiTable Format Conversion: 1927
+    MagiCoder Evol Instruct: 100
+    gsm8k: 50
+  teacher_counts_usable_unique:
+    GLM-4.7: 461706
+    GPT 5.1 Nano: 423916
+    GLM-4.6: 196821
+    GPT-5-mini: 29992
+    Qwen3: 19913
+    GPT-OSS-120B: 18664
+    GPT-5-nano: 15802
+    GPT-5: 13844
+    MiniMax M2.0: 13485
+    Kimi K2.0 Thinking: 10994
+    GPT-4o: 9973
+    Kimi-2.5: 9553
+    GLM-5.0: 8011
+    Gemini-2.5-Flash: 2534
+materialization:
+  frozen: /e/data1/datasets/playground/ot/agenttrove-sft-v1/hf_snapshot
+  root: /e/data1/datasets/playground/ot/agenttrove-sft-v1
+  download_log: /e/data1/datasets/playground/ot/agenttrove-sft-v1/download.log
+  file_count: 81
+  total_bytes: 19552371791
+  parquet_count: 38
+  parquet_bytes: 19552345444
+  manifest_path: materialization_manifest.json
+  manifest_sha256: 0b494026cbea02585be6b4cf306f8b79f66be24ac411bdc383b89995041ea897
+  parquet_manifest_sha256: 3f1510c7e094d8d1411550908b323018595249ad4e5f5d32fe04d0d9d651c778
+  sha256sums: SHA256SUMS
+  snapshot_layout: hf_snapshot local_dir (data/*.parquet + README.md)
+proposed_subsets:
+  clean_completion_filter:
+    status: adopted
+    definition: |
+      Completed and not errored/cut:
+        - last assistant turn contains `task_complete` OR `result`/`judgment` is success
+          (`1.0` / `success` / `judgment=Yes`)
+        - last role is assistant
+        - last assistant JSON is brace-balanced (not cut mid-object)
+        - last assistant is non-empty
+        - `result` is not an error/timeout token (AgentTimeoutError, *Error, timeout, ...)
+      Pass rate on unique usable rows: 85.8% (1,281,042 / 1,492,870 per-shard-unique;
+      777,730 of those also have recovery-looking user turns).
+    stats: /e/data1/datasets/playground/ot/agenttrove-sft-v1/completed_clean_filter_stats.json
+  balanced_agentic_v2_clean_completion:
+    status: materialized
+    parent: balanced_agentic_v1
+    policy: |
+      Same source cap as v1 (20k/source, exclude exp_* / unknown, dedup),
+      plus the clean_completion_filter. Preferred agentic base for the Grug mix.
+    materialized_row_count: 347745
+    materialized: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_v2_clean_completion
+    subset_manifest: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_v2_clean_completion/subset_manifest.json
+    dropped_highlights: {not_completed: 45928, errored_or_cut: 41733}
+  balanced_agentic_recovery_v1:
+    status: materialized
+    parent: balanced_agentic_v2_clean_completion
+    policy: |
+      v2 clean-completion plus recovery-looking user turn (ERROR / parse / retry /
+      failed / Invalid). Target pool for the "agentic recover" mix component.
+    materialized: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_recovery_v1
+    subset_manifest: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_recovery_v1/subset_manifest.json
+    materialized_row_count: 241083
+    global_recovery_pass_before_cap: 777730
+  balanced_agentic_v1:
+    status: proposed
+    goal: balanced agentic SFT subset for Grug format/recovery mix (issue 0048 / GH #50)
+    policy: |
+      Drop null conversations and identical duplicate (trial_name, run_id, episode) rows.
+      Keep the first row per (trial_name, run_id, episode); content-different variants are
+      available as a separate variant pool and are not in this cut.
+      Exclude ablation sources (exp_tas/exp_rpt/exp_rle) and `unknown` — exp_* is sampling
+      ablations of the same tasks (~28% of usable) and will dominate any naive concat.
+      Cap 20,000 rows per source so freelance/taskmaster/stack_exchange do not drown
+      smaller agentic families.
+    family_targets:
+      swe_repair: {sources: [swesmith, r2egym, Inferred Bugs, defects 4j, SWEGym], usable: 137380}
+      shell_cli: {sources: [nl2bash, bash textbook, staqc], usable: 69892}
+      competitive_code: {sources: [code_contests, codeforces, puzzles], usable: 84821}
+      freelance_general: {sources: [freelancer, taskmaster], usable: 281788}
+      qa_stack: {sources: [stack_exchange, StackExchange Overflow, Qasper], usable: 158237}
+      repo_tools: {sources: [repo scaffold, multifile composition, Glaive Code Assistant, Self-Instruct Naive, WikiTable Format Conversion, MagiCoder Evol Instruct], usable: 41219}
+      math_science: {sources: [math, Nemotron Prism, gsm8k], usable: 16975}
+      neulab_tools: {sources: [neulab], usable: 55200}
+    estimated_row_count: 363476
+    materialized_row_count: 363476
+    materialized: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_v1
+    subset_manifest: /e/data1/datasets/playground/ot/agenttrove-sft-v1/balanced_agentic_v1/subset_manifest.json
+    cutter: rl/scripts/data/build_agenttrove_balanced_subset.py
+    cutter_sha256: c47d7815626f04fbef63c65b7bc571f6c855c5954c5998ae6a02a2c8439cac66
+    notes:
+      - no reward column; do not filter on reward==1 (only 1.21% of usable rows have result success/1.0, almost all swesmith/r2egym)
+      - prefer behavioural filters (task_complete, recovery-ish, json-format) once the grug failure taxonomy is frozen
+      - 0% OpenAI-style tool turns; everything is terminus-2 inline JSON `commands`
+limitations:
+  - 'card schema is wrong: `conversations` not `messages`; no `reward` column; no `task_id`'
+  - '7.57% published rows are null-conversation padding from exp_rle/exp_rpt/unknown merges'
+  - '214,593 identical duplicate rows and 118,611 same-key different-content variants'
+  - 'no reliable success label for most rows (`result` present on 12.9%, mostly AgentTimeoutError)'
+  - 'exp_tas alone is 28% of usable rows and is an ablation dump, not task diversity'
+  - 'this is an SFT trace corpus, not a Harbor RL task pool; do not point `data.train_data` at it'
+  - 'Grug/Snowball contamination: some sources overlap known SFT mixes (nemotron-terminal lineage); not a clean eval set'
+registered_at: "2026-09-25T12:00:00+02:00"

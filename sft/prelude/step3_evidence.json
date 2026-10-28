@@ -1,0 +1,920 @@
+{
+  "artifact_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step3",
+  "benchmark_decontamination_completed": true,
+  "benchmark_exclusions_sha256": "7fe8fb758e1c5d5dc84f93c8dae483938d5fc28bae86b25e9e31fc584af3d843",
+  "benchmark_review_outcomes": {
+    "alias_prompt_keys": 366122,
+    "content_id_conflict_keys": 168990,
+    "covered_ultra_rows": 1642127,
+    "distinct_retained_stack_file_hashes": 4148261,
+    "diversity_eligible_hit_rows": 456016,
+    "dominant_benchmark_removals": 401016,
+    "full_manifest_parity_verified": true,
+    "low_diversity_only_rows": 73025,
+    "original_and_parallel_manifest_sha256": "d73a451d11eb7184781cfd3ac0f9653e2a4d38f5858a255ff61f38a7190e0325",
+    "post_review_hit_rows": 401079,
+    "raw_hit_rows": 529041,
+    "reference_unique_task_groups": 790910,
+    "retained_stack_repositories": 126549,
+    "reviewed_boilerplate_hashes": 290,
+    "reviewed_boilerplate_only_rows": 54937,
+    "sft_and_benchmark_overlap_rows": 63
+  },
+  "benchmark_review_outcomes_sha256": "a8180c85f3b3473185661e2b2750b7e695340a8df183bb2af64d32df5a3e2178",
+  "canonical_bytes": 566043995688,
+  "canonical_parts_completed": 8932,
+  "completed_scan_units": 9058,
+  "content_id_conflict_keys": 168990,
+  "counts": {
+    "reference": {
+      "accepted_rows": 4412306,
+      "scanned_rows": 4412306
+    },
+    "scan": {
+      "accepted_rows": 197537512,
+      "eligible_hit_rows": 456016,
+      "eligible_license_no_license": 124827321,
+      "eligible_license_permissive": 5609112,
+      "empty_system": 4174742,
+      "excluded_vendor_file": 1177312,
+      "genuine_user_turn": 18031566,
+      "inline_reasoning_preserved": 31909436,
+      "inline_tool_calls_preserved": 15807031,
+      "input_rows": 199371691,
+      "literal_boundary_in_content_preserved": 706770,
+      "ngrams_evaluated": 281182600496,
+      "normalized_rows": 197537512,
+      "raw_document_preserved": 184327311,
+      "raw_hit_rows": 529041,
+      "rejected_ambiguous_tool_response": 704569,
+      "rejected_ineligible_code_file": 1129556,
+      "rejected_malformed_inline_reasoning": 7,
+      "rejected_missing_file_provenance": 1,
+      "rejected_unknown_role": 46,
+      "response_wrappers_unwrapped": 15033604,
+      "scanned_rows": 199371691,
+      "terminal_feedback_to_tool": 2735752,
+      "terminal_initial_task": 366154,
+      "tool_role_response": 2735752,
+      "user_wrapped_response_to_tool": 15033604
+    }
+  },
+  "curation_build_id": "128263cb0e97dcc66720515095d5c6a4b5f724511ed8cc081ba60aa9e58bb6d1",
+  "curation_manifest_sha256": "852dfef3a912d2270a97c9ed0319c2f5049d1ea8e5800c24ee6fff0ccc3d463d",
+  "decision_build_id": "d4a08456c0b8c953a79700392de5887e4c4381bcd2fdc620a873f21c30662401",
+  "decision_counts": {
+    "benchmark_match": 401016,
+    "covered_by_stack": 1642127,
+    "exact_duplicate": 25931369,
+    "keep": 169315668,
+    "reserved_sft_task": 247332,
+    "retained_train": 167639429,
+    "retained_validation": 1676239
+  },
+  "decision_counts_by_source": {
+    "FinePDFs-EU-replay": {
+      "benchmark_match": 439,
+      "keep": 1132321
+    },
+    "FinePDFs-English-long": {
+      "benchmark_match": 475,
+      "keep": 537525
+    },
+    "FinePDFs-English-replay": {
+      "benchmark_match": 458,
+      "keep": 545542
+    },
+    "Nemotron-CC-original-high": {
+      "benchmark_match": 185,
+      "exact_duplicate": 4481,
+      "keep": 795334
+    },
+    "Nemotron-Cascade-2-SFT-Data": {
+      "benchmark_match": 161853,
+      "exact_duplicate": 6828903,
+      "keep": 5605959,
+      "reserved_sft_task": 247332
+    },
+    "Nemotron-Pretraining-Specialized-v1": {
+      "benchmark_match": 143987,
+      "exact_duplicate": 514,
+      "keep": 53525210
+    },
+    "Nemotron-Terminal-Corpus": {
+      "benchmark_match": 1609,
+      "exact_duplicate": 56818,
+      "keep": 307727
+    },
+    "UltraData-Stack-v3-L2": {
+      "benchmark_match": 90174,
+      "covered_by_stack": 1642127,
+      "exact_duplicate": 19035084,
+      "keep": 105236085
+    },
+    "dclm-baseline-1.0": {
+      "benchmark_match": 263,
+      "exact_duplicate": 5569,
+      "keep": 1503416
+    },
+    "stack-v3-train": {
+      "benchmark_match": 1573,
+      "keep": 126549
+    }
+  },
+  "decision_manifest_sha256": "d73a451d11eb7184781cfd3ac0f9653e2a4d38f5858a255ff61f38a7190e0325",
+  "decision_parquet_files": 288476,
+  "deduplication_completed": true,
+  "final_mixture_weights_frozen": false,
+  "finalizer_sha256": "194d51851731d90cbb699e281101368d4e1288c93f4f0cd26647073edcfb43fe",
+  "full_curation_completed": true,
+  "full_source_materialization_completed": true,
+  "input_manifest_sha256": "1be01de78dde2045ea352babe85534c9ccf768a73f53488bdd48289b2eeadf1b",
+  "jobs": {
+    "account": "synthlaion",
+    "cluster": "jureca",
+    "decide": 15718814,
+    "failed_unsorted_index_probe": 15718724,
+    "finalize": 15718887,
+    "finalize_threads": 64,
+    "finalize_without_metadata_cache_cancelled": 15718818,
+    "full_scan": 15718735,
+    "global_review": 15718807,
+    "global_review_powerup_cancelled": 15718742,
+    "materialize": 15718817,
+    "materialize_dependency": "afterok:15718847",
+    "parallel_decision_completion": 15718847,
+    "pilot": 15718733,
+    "pilot_materialize": 15718739,
+    "reference": 15718734
+  },
+  "near_deduplication_completed": false,
+  "parallel_completion": {
+    "accepted_rows": 197537512,
+    "build_id": "d4a08456c0b8c953a79700392de5887e4c4381bcd2fdc620a873f21c30662401",
+    "decision_manifest_sha256": "d73a451d11eb7184781cfd3ac0f9653e2a4d38f5858a255ff61f38a7190e0325",
+    "helper_sha256": "9c42c0da6da69f2e7a60a14f2a5ec61ae6e1605218cf27113aa5fbe3c776f3f4",
+    "reducer_sha256": "e683fc878d12d3d39976f7be03875a5a33db3d096f28275cb60fed0fd1f21118",
+    "retained_rows": 169315668,
+    "status": "decision manifest verified",
+    "verified_files": 288476,
+    "workers": 64
+  },
+  "production_job_results": {
+    "15718734": {
+      "elapsed": "00:00:38",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718735": {
+      "elapsed": "00:26:21",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718807": {
+      "elapsed": "00:07:36",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718814": {
+      "elapsed": "01:06:15",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718817": {
+      "elapsed": "00:08:57",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718847": {
+      "elapsed": "00:02:05",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    },
+    "15718887": {
+      "elapsed": "00:52:28",
+      "exit_code": "0:0",
+      "state": "COMPLETED"
+    }
+  },
+  "production_tools_manifest_sha256": "a517baecaa084be38b5d261b58b76a79ce248b2ef01d7938ace6115bad4473a5",
+  "production_tools_path": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step3/production_tools_v3",
+  "retained_counts": [
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-EU-replay/pdf_multilingual",
+      "rows": 1121099,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-EU-replay/pdf_multilingual",
+      "rows": 11222,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-English-long/long_documents",
+      "rows": 532216,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-English-long/long_documents",
+      "rows": 5309,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-English-replay/pdf_english",
+      "rows": 540140,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "FinePDFs-English-replay/pdf_english",
+      "rows": 5402,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-CC-original-high/nemotron_english",
+      "rows": 787455,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-CC-original-high/nemotron_english",
+      "rows": 7879,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/chat",
+      "rows": 1455984,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/chat",
+      "rows": 14803,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/conversational_agent",
+      "rows": 279662,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/conversational_agent",
+      "rows": 2791,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/instruction_following",
+      "rows": 271699,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/instruction_following",
+      "rows": 2684,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/math",
+      "rows": 2651381,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/math",
+      "rows": 26894,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/science",
+      "rows": 729395,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/science",
+      "rows": 7355,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/swe",
+      "rows": 161631,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Cascade-2-SFT-Data/swe",
+      "rows": 1680,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+      "rows": 1454106,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning",
+      "rows": 14660,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+      "rows": 12665561,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks",
+      "rows": 128180,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+      "rows": 17299809,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA",
+      "rows": 174763,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+      "rows": 20672627,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT",
+      "rows": 209680,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Scientific-Coding",
+      "rows": 896719,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Scientific-Coding",
+      "rows": 9105,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/dataset_adapters",
+      "rows": 222596,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/dataset_adapters",
+      "rows": 2215,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_processing",
+      "rows": 2989,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_processing",
+      "rows": 36,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_querying",
+      "rows": 2739,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_querying",
+      "rows": 28,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_science",
+      "rows": 2307,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/data_science",
+      "rows": 20,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/debugging",
+      "rows": 2060,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/debugging",
+      "rows": 27,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/dependency_management",
+      "rows": 2412,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/dependency_management",
+      "rows": 28,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/file_operations",
+      "rows": 2132,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/file_operations",
+      "rows": 25,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/scientific_computing",
+      "rows": 2005,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/scientific_computing",
+      "rows": 24,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/security",
+      "rows": 2183,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/security",
+      "rows": 19,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/software_engineering",
+      "rows": 2543,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/easy/software_engineering",
+      "rows": 32,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_processing",
+      "rows": 1583,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_processing",
+      "rows": 16,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_querying",
+      "rows": 2198,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_querying",
+      "rows": 35,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_science",
+      "rows": 7530,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/data_science",
+      "rows": 82,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/debugging",
+      "rows": 7345,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/debugging",
+      "rows": 75,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/dependency_management",
+      "rows": 2541,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/dependency_management",
+      "rows": 19,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/file_operations",
+      "rows": 6525,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/file_operations",
+      "rows": 58,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/model_training",
+      "rows": 187,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/model_training",
+      "rows": 1,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/scientific_computing",
+      "rows": 8952,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/scientific_computing",
+      "rows": 82,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/security",
+      "rows": 7165,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/security",
+      "rows": 76,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/software_engineering",
+      "rows": 7158,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/software_engineering",
+      "rows": 75,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/system_administration",
+      "rows": 7677,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/medium/system_administration",
+      "rows": 86,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/data_processing",
+      "rows": 370,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/data_processing",
+      "rows": 5,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/data_science",
+      "rows": 327,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/data_science",
+      "rows": 3,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/debugging",
+      "rows": 297,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/debugging",
+      "rows": 4,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/file_operations",
+      "rows": 267,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/file_operations",
+      "rows": 2,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/scientific_computing",
+      "rows": 279,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/scientific_computing",
+      "rows": 1,
+      "split": "validation"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/security",
+      "rows": 282,
+      "split": "train"
+    },
+    {
+      "kind": "conversation",
+      "mix_source": "Nemotron-Terminal-Corpus/synthetic_tasks/skill_based/mixed/security",
+      "rows": 4,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+      "rows": 15157136,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp",
+      "rows": 140904,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+      "rows": 2738086,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp",
+      "rows": 29192,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+      "rows": 2657375,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go",
+      "rows": 26158,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+      "rows": 34315723,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java",
+      "rows": 337398,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+      "rows": 12369720,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript",
+      "rows": 124203,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+      "rows": 3677046,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php",
+      "rows": 36240,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+      "rows": 20989717,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python",
+      "rows": 210197,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+      "rows": 1065826,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r",
+      "rows": 10538,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+      "rows": 5208320,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby",
+      "rows": 52668,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+      "rows": 2479180,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust",
+      "rows": 32701,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+      "rows": 3543681,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell",
+      "rows": 34076,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "dclm-baseline-1.0/dclm_english",
+      "rows": 1488197,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "dclm-baseline-1.0/dclm_english",
+      "rows": 15219,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "stack-v3-train/data/code",
+      "rows": 91863,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "stack-v3-train/data/code",
+      "rows": 928,
+      "split": "validation"
+    },
+    {
+      "kind": "document",
+      "mix_source": "stack-v3-train/data/long_documents",
+      "rows": 33426,
+      "split": "train"
+    },
+    {
+      "kind": "document",
+      "mix_source": "stack-v3-train/data/long_documents",
+      "rows": 332,
+      "split": "validation"
+    }
+  ],
+  "retained_rows": 169315668,
+  "reviewed_boilerplate_hashes": 290,
+  "runtime": {
+    "compiler": "g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-14)",
+    "native_library_sha256": "680c40a4af01d15b540342a5352edd977530312692124d223dab557750dd63c7",
+    "packages": {
+      "duckdb": "1.4.3",
+      "numpy": "2.5.4",
+      "pyarrow": "26.0.0",
+      "zstandard": "0.23.0"
+    },
+    "python": "3.12.8",
+    "unicode": "15.0.0"
+  },
+  "scan_build_id": "a7152c86f2b2ccff1d398c4b35ca5ff653319eb2db075498b94e1e18c66df476",
+  "scan_summary_sha256": "d056ebf287f9437c99dad0f79ba123d90400b86379073651ec2050ca6c6d3fe5",
+  "schema_version": 1,
+  "source_row_coverage": {
+    "FinePDFs-EU-replay": 1132760,
+    "FinePDFs-English-long": 538000,
+    "FinePDFs-English-replay": 546000,
+    "Nemotron-CC-original-high": 800000,
+    "Nemotron-Cascade-2-SFT-Data": 13548669,
+    "Nemotron-Pretraining-Specialized-v1": 53669711,
+    "Nemotron-Terminal-Corpus": 366154,
+    "UltraData-Stack-v3-L2": 127133027,
+    "dclm-baseline-1.0": 1509248,
+    "stack-v3-train": 128122
+  },
+  "status": "step3-complete",
+  "tests": {
+    "modules": [
+      "rl/scripts/data/test_curate_prelude_midtrain.py",
+      "rl/scripts/data/test_finish_prelude_midtrain_decisions.py"
+    ],
+    "passed": 8
+  },
+  "training_has_run": false,
+  "validation_partition_frozen": true,
+  "verification": {
+    "checksum_workers": 16,
+    "memory_limit": "256GB",
+    "parquet_metadata_cache": true,
+    "threads": 64
+  }
+}

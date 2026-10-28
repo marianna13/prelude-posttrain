@@ -1,0 +1,36 @@
+schema_version: 1
+kind: model
+id: prelude-9b-anneal300b-ml1-dominant2-iter0989075
+display_name: OpenEuroLLM Prelude 9B base, anneal300b multilingual1_dominant2 iter 989075
+publication:
+  status: published
+  hf_repo: openeurollm/prelude
+  hf_branch: anneal300b_multilingual1_dominant2_iter_0989075
+  revision: 9d252ade085f74176eb2a3fa321a59f3b5af6deb
+  url: https://huggingface.co/openeurollm/prelude/tree/anneal300b_multilingual1_dominant2_iter_0989075
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  parameter_count: 9.09B
+  hidden_layers: 36
+  hidden_size: 4096
+  max_position_embeddings: 4096
+  precision: bfloat16
+  tokenizer: same 256k Gemma-style tokenizer as prelude-9b-anneal300b-iter0989075 (add_bos_token=true)
+materialization:
+  jureca:
+    path: /p/data1/mmlaion/shared/models/openeurollm/prelude-anneal300b-ml1-dominant2-iter0989075
+  mn5:
+    path: /gpfs/scratch/ehpc532/ot/models/prelude-anneal300b-ml1-dominant2-iter0989075
+provenance:
+  license: apache-2.0
+  tokens_seen: 8.30T
+  training_summary: >-
+    Same stable-phase branch point (iter 953,312) and 300B-token WSD linear cooldown as
+    prelude-9b-anneal300b-iter0989075, but on the annealing mixture datamix_lumi_multilingual1_dominant2
+    (github.com/OpenEuroLLM/annealing-experiments/tree/main/prelude): the "dominant2" English/code/math component
+    (~16% math: MegaMath, swallow-math, finemath; ~16% code: common-pile Stack v2, StarCoder, swallow-code;
+    mixture-vitae nuggets and Nemotron-Pretraining-Specialized; AgentTrove 1-2%) plus the multilingual1 component
+    (HPLT-4.0 instead of HPLT-3.0, ~18% non-English as in the base mix). Candidate SFT base; see
+    rl/evals/analysis/prelude-sft-base-selection/.
+registered_at: "2026-10-15T23:30:00+02:00"

@@ -1,0 +1,73 @@
+{
+  "baseline_record": "rl/evals/runs/20261016-prelude-anneal300b-ml1-dominant2-base-fewshot.yaml",
+  "chat_baseline": {
+    "answer_extraction": "Strip everything through final </think>; open reasoning is empty answer; retain raw outputs and format metrics.",
+    "examples_per_task": 100,
+    "max_generation_tokens": 1024,
+    "max_window_tokens": 4096,
+    "model": "Frozen initialized step2/base_hf",
+    "purpose": "Pre-pilot format/quality baseline; source few-shot scores remain a separate protocol.",
+    "selection": "SHA256-ranked stable IDs, seed 20261018; source subset manifest frozen before inference",
+    "tasks": [
+      "GSM8K",
+      "MATH500",
+      "HumanEval+"
+    ],
+    "temperature": 0,
+    "thinking_modes": [
+      true,
+      false
+    ]
+  },
+  "eight_node": {
+    "context": 16384,
+    "gpus_per_node": 4,
+    "nodes": 8,
+    "pass": "All 32 ranks complete; finite loss throughout; capture post-compilation throughput and per-rank memory; native/HF checkpoint complete.",
+    "scope": "Performance-only pilot; full production is not automatically launched.",
+    "steps": 20,
+    "tokens_per_step": 1048576
+  },
+  "frozen_at_utc": "2026-10-18T12:58:16.159702+00:00",
+  "long_context": {
+    "classification": "Baseline/smoke measurements characterize current checkpoints. Production promotion requires stage checkpoint targets plus short-context noninferiority; poor baseline scores are reported as failures, never passed.",
+    "contexts": [
+      4096,
+      16384,
+      32768,
+      65536
+    ],
+    "evaluated_examples_per_task_per_context": 100,
+    "generation_tokens": "Upstream per-task generation budget",
+    "implementation": "Installed lm-eval 0.4.13 RULER, snapshot code hashes before generation",
+    "quality_target": {
+      "niah_single_repeat_pct": 95,
+      "ruler_unweighted_mean_pct": 85
+    },
+    "selection": "First 100 of upstream deterministic 500-example generator at each context; freeze prompt IDs and measured token lengths.",
+    "tasks": "All 13 RULER tasks; report NIAH tasks separately",
+    "temperature": 0,
+    "truncation": "Forbidden; any oversized prompt or HTTP truncation is an infrastructure failure."
+  },
+  "schema_version": 1,
+  "short_context_noninferiority": {
+    "comparison_count": 6,
+    "fail": "Any adjusted confidence upper bound is below -margin.",
+    "familywise_alpha": 0.05,
+    "maximum_drop_pp": {
+      "GSM8K": 2.0,
+      "HumanEval+": 2.0,
+      "MATH": 2.0,
+      "MBPP+": 2.0,
+      "MMLU-Pro": 1.5,
+      "MultiPL-E": 2.0
+    },
+    "multipl_e": "Equal language weight; resample shared original problem IDs jointly across languages.",
+    "otherwise": "inconclusive; never treat non-significance or repeated identical greedy runs as proof of preservation.",
+    "paired_bootstrap_replicates": 20000,
+    "pass": "Every metric point estimate and Bonferroni-adjusted one-sided paired confidence lower bound is at least -margin.",
+    "seed": 20261018
+  },
+  "short_context_protocol": "Existing 4096-token greedy plain-text base_fewshot suite, same prompts, sample IDs, BOS, budgets and task versions.",
+  "status": "frozen-before-new-quality-evaluations"
+}

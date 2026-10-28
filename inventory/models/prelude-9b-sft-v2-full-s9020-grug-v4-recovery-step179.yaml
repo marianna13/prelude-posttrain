@@ -1,0 +1,31 @@
+schema_version: 1
+kind: model
+id: prelude-9b-sft-v2-full-s9020-grug-v4-recovery-step179
+display_name: Prelude 9B SFT v2 full s9020 + Grug v4 recovery SFT (two passes), Megatron iter 179
+publication:
+  status: unpublished
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 131072
+  rope_theta: 9000000
+  rope_scaling: "yarn, factor 2, original_max_position_embeddings 65536"
+  precision: bfloat16
+  chat_template: "Prelude ChatML, Qwen3-compatible (<think>, hermes <tool_call>); enable_thinking=false prefills an empty think block"
+  base_model:
+    id: prelude-9b-sft-v2-full-stage4-step9020
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-sft-v2-full-s9020-grug-v4-recovery-step179
+    sha256: prelude-9b-sft-v2-full-s9020-grug-v4-recovery-step179.sha256 (next to the checkpoint)
+  mn5:
+    megatron_checkpoint: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/sft-v2-full-s9020-grug-v4-recovery/checkpoints/iter_0000179
+    hf_export: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/sft-v2-full-s9020-grug-v4-recovery/hf/iter_0000179
+provenance:
+  issue: 0058 (Prelude SFT v2; recovery SFT on top of the full SFT)
+  training_summary: "grug-sft-mix-v4-40M-think (7,453 rows: agentic 2186, handoff 441, recovery 400, non-agentic 4426) rendered with the Prelude chat tokenizer, 2 passes packed to 1,436 x 64K rows; Megatron-Bridge on MN5 job 48044063, 8 nodes, TP4, GBS 8, LR 1e-5, warmup 9, 179 steps (step 90 = one pass), expandable_segments allocator; HF export loss check matches mcore within 0.0008"
+  evals: "evalchemy (9 jobs) + agentic SWE/TB2.1/TBLite reps 1-3, eval_moves/prelude_20261026_sft_recovery.sh"
+registered_at: "2026-10-26T12:00:00+01:00"

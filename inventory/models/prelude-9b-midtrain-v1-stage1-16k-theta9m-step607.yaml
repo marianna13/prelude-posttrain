@@ -1,0 +1,33 @@
+schema_version: 1
+kind: model
+id: prelude-9b-midtrain-v1-stage1-16k-theta9m-step607
+display_name: Prelude 9B mid-train v1, stage 1 (16K, RoPE theta 9M), step 607
+publication:
+  status: published
+  visibility: public
+  hf_repo: marianna13/prelude-9b-midtrain-v1
+  hf_branch: stage1-16k-step607
+  revision: e08c5731a35424b70be67a6707c3053cd079fbaf
+  published_at: "2026-10-26"
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 65536
+  rope_theta: 9000000
+  precision: bfloat16
+  base_model:
+    id: prelude-9b-anneal300b-ml1-dominant2-iter0989075
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-midtrain-v1-stage1-16k-theta9m-step607
+  mn5:
+    megatron_checkpoint: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/stage1-16k-theta9m/checkpoints/iter_0000607
+provenance:
+  training_summary: >-
+    Stage 1 of the Prelude mid-training plan (issue 0054, rl/evals/prelude_midtrain/budget.json): 607 updates at
+    16K context, batch 64, 0.50B seen / 0.49B trained tokens, RoPE theta 9M, Megatron on MN5, exported to HF
+    (megatron_export.json). Stages 2 (32K) and 3 (64K) not run yet.
+registered_at: "2026-10-21T00:00:00+02:00"

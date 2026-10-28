@@ -1,0 +1,25 @@
+{
+  "runtime_smoke_v3": {
+    "rl/scripts/data/prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "rl/scripts/data/prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716",
+    "rl/sft/levanter/scripts_grug/grug_datakit_chat.py": "c83d78b0000b05334c3404f1bfad76635271b7160f499c860be4149cec2cc179",
+    "rl/sft/levanter/scripts_grug/sft_main.py": "d93bebc3b735a73577a8744e2c36c482186ed82cf29a620fe824891ff6db49b3",
+    "rl/sft/prelude/midtrain_format.py": "5a108af4f0a90ebdd730db48a9d1c0ea02117a11407a07e0d49f029e9b6668fc",
+    "rl/sft/prelude/prepare_midtrain_levanter.py": "c2b9fc54744b96261fc91e53dd2ef09d93862618a99055d9e07cd24f61559276",
+    "rl/sft/prelude/prepare_midtrain_tokenizer.py": "ae68cb4534b1a355470e83691fa6e827af49cda0b9afc09e53a68518d72f4b30",
+    "rl/sft/prelude/qwen3_fa4.py": "0682bfdc0bf6efe6abdb545fd069ca6cf7edb172e3b06f86136b0ef2440d06f0",
+    "rl/sft/prelude/smoke_midtrain_training.py": "06530f9f532f0114f3372472d5b3c19ee7c4dbc4c42625f482dd8e806905e8a0"
+  },
+  "runtime_production_v1": {
+    "rl/scripts/data/prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "rl/scripts/data/prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716",
+    "rl/sft/levanter/scripts_grug/grug_datakit_chat.py": "c83d78b0000b05334c3404f1bfad76635271b7160f499c860be4149cec2cc179",
+    "rl/sft/levanter/scripts_grug/sft_main.py": "7ea708d1e568c79c5379b3824ebf8c594324b563e2ac34d22bbf41f3fc3e6297",
+    "rl/sft/prelude/finite_stage.py": "abfdaa88de493ecdf5da4f6002cfa648b8263546b6ddcfb7462fc420308a997d",
+    "rl/sft/prelude/midtrain_format.py": "5a108af4f0a90ebdd730db48a9d1c0ea02117a11407a07e0d49f029e9b6668fc",
+    "rl/sft/prelude/prepare_midtrain_levanter.py": "c2b9fc54744b96261fc91e53dd2ef09d93862618a99055d9e07cd24f61559276",
+    "rl/sft/prelude/prepare_midtrain_tokenizer.py": "ae68cb4534b1a355470e83691fa6e827af49cda0b9afc09e53a68518d72f4b30",
+    "rl/sft/prelude/qwen3_fa4.py": "0682bfdc0bf6efe6abdb545fd069ca6cf7edb172e3b06f86136b0ef2440d06f0",
+    "rl/sft/prelude/smoke_midtrain_training.py": "06530f9f532f0114f3372472d5b3c19ee7c4dbc4c42625f482dd8e806905e8a0"
+  }
+}

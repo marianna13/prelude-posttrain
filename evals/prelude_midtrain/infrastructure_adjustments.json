@@ -1,0 +1,19 @@
+{
+  "policy_commit": "0382322",
+  "quality_thresholds_changed": false,
+  "ruler_sizing": {
+    "reason": "Upstream FWE at 16K and QA SQuAD at 64K can exceed the context including generation and BOS/prefix.",
+    "resolution": "Regenerate the entire deterministic task with generator_window reduced by maximum measured overflow plus eight tokens, repeating until all first 100 examples fit. Preserve every sample ID and actual generator_window. Never truncate or omit an input.",
+    "applied_before_affected_quality_inference": true
+  },
+  "code_grader": {
+    "reason": "Current filelock refuses fork from concurrent code_eval workers; spawn without preloaded numpy makes canonical plus tests fail to import numpy after the reliability guard.",
+    "resolution": "Python forkserver with numpy preloaded; retain unmodified code_eval reliability guard and full plus tests with timeout 20 seconds.",
+    "controls": "Canonical plus solution passes and deliberately invalid program fails."
+  },
+  "ruler_generation_replay": {
+    "finding": "Upstream samplers use global Python random state in addition to local seed42 shuffles. A regenerated set can differ across invocations.",
+    "resolution": "All measurements and future stage comparisons must replay the complete frozen token IDs and raw documents under inputs-sha256.json. Do not regenerate a comparator dataset. Frozen prompt SHA256s are the benchmark identity.",
+    "already_frozen_inputs_changed": false
+  }
+}

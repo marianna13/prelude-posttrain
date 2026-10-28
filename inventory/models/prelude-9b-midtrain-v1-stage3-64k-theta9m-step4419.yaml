@@ -1,0 +1,36 @@
+schema_version: 1
+kind: model
+id: prelude-9b-midtrain-v1-stage3-64k-theta9m-step4419
+display_name: Prelude 9B mid-train v1, stage 3 (64K, RoPE theta 9M), step 4419
+publication:
+  status: published
+  visibility: public
+  hf_repo: marianna13/prelude-9b-midtrain-v1
+  hf_branch: stage3-64k-step4419
+  revision: c92d1db4888e766cc35908a93c3ff05655a5fb21
+  published_at: "2026-10-26"
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 65536
+  rope_theta: 9000000
+  precision: bfloat16
+  base_model:
+    id: prelude-9b-anneal300b-ml1-dominant2-iter0989075
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-midtrain-v1-stage3-64k-theta9m-step4419
+  mn5:
+    megatron_checkpoint: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/stage3-64k-theta9m/checkpoints/iter_0004419
+provenance:
+  training_summary: >-
+    Stage 3 (final) of the Prelude mid-training plan (issue 0054, rl/evals/prelude_midtrain/budget.json): continues
+    stage 2 (prelude-9b-midtrain-v1-stage2-32k-theta9m-step1821) for 2,598 updates at 64K context, batch 16 (global
+    step 1821 -> 4419, 2.00B seen / 1.94B trained tokens; 3.50B / 3.40B over all three stages), RoPE theta 9M,
+    Megatron on MN5, exported to HF.
+  evals: rl/evals/runs/20261022-prelude-midtrain-s3-64k-t9m-s4419-* (RULER mean 84.2 / 80.2 / 74.5 / 56.6 at
+    4K/16K/32K/64K; summary in rl/evals/prelude_midtrain/README.md)
+registered_at: "2026-10-22T16:00:00+02:00"

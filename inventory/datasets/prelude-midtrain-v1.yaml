@@ -1,0 +1,90 @@
+schema_version: 1
+kind: dataset
+id: prelude-midtrain-v1
+display_name: Prelude 9B mid-training v1, finite 16K / 32K / 64K curriculum
+modality: language-modeling
+training_use: [mid-training, context-extension]
+rl_task_pool: false
+publication:
+  status: local-verified
+  visibility: private
+  note: Token export, CPU/MN5 loaders and short 9B fresh/resume/export verified; production recipe and evaluation gates remain step 6.
+provenance:
+  upstream:
+    - {hf_repo: nvidia/Nemotron-Cascade-2-SFT-Data, revision: 9f36020daf067f1a8b39336bf619fe30af30bb02}
+    - {hf_repo: nvidia/Nemotron-Pretraining-Specialized-v1, revision: 9ed3718b5f2ae29074c5e34e64115432b7c4320f}
+    - {hf_repo: nvidia/Nemotron-Terminal-Corpus, revision: a1667c4ffdadea02a89bffe4f1bb7ca2ff19f8d9}
+    - {hf_repo: openbmb/UltraData-Stack-v3-L2, revision: d6bdb3e707cf17bbfb64067cd4c4ed84b0809baf}
+    - {hf_repo: HuggingFaceCode/stack-v3-train, revision: 1f61b735bc0a5698345ce2196730f24bfa467f33}
+  replay: Bounded local DCLM / original-high Nemotron-CC / English and EU FinePDFs proxy; exact files in source_selection.json.
+  long_pdf: Separate pinned English FinePDFs file; originals at least 32768 tokens.
+  code_license_policy: Both permissive and no_license; vendor files excluded.
+  mv_revision: c8abab4cac73da35c2876a34d2837aac6ab37298
+content:
+  format: "Parquet {id, parent_id, ids: list<int32>, loss: list<int8>, context, intervals, kind, pool, mix_source, split_group, provenance_json}"
+  original_formats: [document, conversation]
+  split: train
+  held_out: Frozen step-3 validation partition is excluded from these training shards.
+  parents: 1207832
+  chunks: 1224141
+  rows: 1224141
+  max_tokens: 65536
+  original_tokens: 3495329751
+  seen_tokens: 3499521164
+  trained_tokens: 3398497611
+  zero_target_chunks: 0
+  stages:
+    - {context: 16384, parents: 186595, chunks: 190524, seen_tokens: 499918595, trained_tokens: 489184884}
+    - {context: 32768, parents: 347764, chunks: 352809, seen_tokens: 999867143, trained_tokens: 973966082}
+    - {context: 65536, parents: 673473, chunks: 680808, seen_tokens: 1999735426, trained_tokens: 1935346645}
+  loss: All ordinary document/system/user/assistant targets and earlier reasoning; initial BOS and complete semantic tool groups masked.
+  continuation: Masked BOS plus 256 masked original context tokens; every original new token retained, final EOS preserved, no implicit truncation.
+  repetition: No parent reused within or across production stages; finite shuffle, exhaustion stops.
+  decontamination: Exact task/document dedup, reserved SFT overlap removal, code-file overlap and reviewed benchmark 13-gram removal; no near/semantic dedup pass.
+  seen_category_weights: {reasoning: 0.30, code_agent: 0.25, chat_if: 0.10, long_documents: 0.125, replay: 0.225}
+  seen_format_weights: {document: 0.65, conversation: 0.35}
+tokenizer:
+  length: 262151
+  model_vocab_size: 262272
+  bos: 1
+  document_eos: 2
+  chat_eos: 262146
+  pad: 262144
+  tokenizer_json_sha256: 673fb4ba274ff03cf9d5fd18d4b6d09a10ab40a3f2835490d9f43916031fa856
+  chat_template_sha256: f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047
+base:
+  checkpoint: prelude-9b-anneal300b-ml1-dominant2-iter0989075
+  revision: 9d252ade085f74176eb2a3fa321a59f3b5af6deb
+  initialized: Six chat-token embedding/head rows initialized once in step2/base_hf; resume never reinitializes.
+materialization:
+  jureca:
+    root: /p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1
+    release: /p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/release
+    manifest: /p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step5/release/release_manifest.json
+    manifest_sha256: 1acbb7b946512f3a25708e05ca1f84178d04e2e3c3c980ea99c4af276aaa7e1a
+    export_build_id: 5469aecd86ad27a86f22f093e95e7fe0037cb0db7d2f8e7fb69736dbd19540c8
+    release_build_id: e4e594c1190b2c02b576875e94484467d2a7983218fc98fe860ec581fa875819
+    mixture_build_id: 7239c4ca51352ad5bafc4565cb0675b1ebdb73549fcf92c37401c4f71f493f1b
+    data_shards: 26103
+    artifact_bytes: 5570423420
+  mn5:
+    root: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1
+    native_cache: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/cache_v3
+    handoff: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/handoff_v3
+    handoff_build_id: 36195f2757717d33a588dc065d8e35111416b4969a42e79987509336cd376605
+    checksums_and_native_cache_loader_verified: true
+    cache_import_job: 47456439
+    packed_sequences: {16384: 38791, 32768: 38825, 65536: 41554}
+    gpu_canary_verified: true
+    gpu_canary_job: 47456121
+    gpu_readback_job: 47456853
+    verification: See rl/sft/prelude/step5_evidence.json for transfer and target qualification status.
+  build:
+    entrypoint: rl/sft/prelude/export_midtrain.sbatch
+    implementation: rl/scripts/data/export_prelude_midtrain.py
+    verification: rl/scripts/data/verify_prelude_midtrain_export.py
+    levanter_import: rl/sft/prelude/prepare_midtrain_levanter.py
+    documentation: rl/sft/prelude/EXPORT_MIDTRAIN.md
+    evidence: rl/sft/prelude/step5_evidence.json
+    data_jobs: [15719227, 15719240, 15719243, 15719244, 15719245]
+    built_at: '2026-10-17'

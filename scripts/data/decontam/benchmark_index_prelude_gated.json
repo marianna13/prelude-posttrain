@@ -1,0 +1,15 @@
+[
+ {
+  "name": "gpqa_diamond",
+  "hf_dataset": "Idavidrein/gpqa",
+  "config": "gpqa_diamond",
+  "split": "train",
+  "text_fields": [
+   "Question",
+   "Correct Answer",
+   "Incorrect Answer 1",
+   "Incorrect Answer 2",
+   "Incorrect Answer 3"
+  ]
+ }
+]

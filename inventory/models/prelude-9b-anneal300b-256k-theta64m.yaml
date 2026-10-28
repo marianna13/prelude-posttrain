@@ -1,0 +1,46 @@
+schema_version: 1
+kind: model
+id: prelude-9b-anneal300b-256k-theta64m
+display_name: OELLM Prelude 9B anneal300b, 256K context (RoPE theta 64M)
+publication:
+  status: published
+  hf_repo: birgermoell/oellm-9b-256k-theta64m-prelude-anneal300b
+  revision: 4aad6daf4e9f472c491f2165bccc3db548cb3c31
+  url: https://huggingface.co/birgermoell/oellm-9b-256k-theta64m-prelude-anneal300b
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  parameter_count: 9.09B
+  hidden_layers: 36
+  hidden_size: 4096
+  attention_heads: 32
+  key_value_heads: 8
+  vocab_size: 263168   # padded to TP 8 (base: 262272); tokenizer unchanged (262,145 ids)
+  max_position_embeddings: 262144
+  rope_theta: 64000000
+  precision: bfloat16
+  weights_format: single pytorch_model.bin (pickle, not safetensors)
+  base_model:
+    id: prelude-9b-anneal300b-iter0989075
+    hf_repo: openeurollm/prelude
+    revision: f289699b246dba59907df27e743d4a433613175a
+  config_sha256: 30d68e4f23a4a123613d138fe9dfa385044876ca6545355600bd13c747ab6a87
+  tokenizer_config_sha256: df2af457275bb148c34709eb3d0238ce9ae5d2e412396e3b7e1fdeafc01ad560   # = base
+  tokenizer_model_sha256: ac214401227404105817141c21c6693e3b17c878465a42765d2c345310e003ce    # = base
+  tokenizer_sha256: ce296af846f114e330e8e62887df4c6abafd4fd682434fb0ced1a3abfa2e04c1          # tokenizer.json re-exported, differs from base file
+  weights_sha256: 5dcf789668d1233b48c8e99bf3733f0e80abbde4a74de1974b0605108030378c
+materialization:
+  jureca:
+    path: /p/data1/mmlaion/shared/models/openeurollm/prelude-anneal300b-256k-theta64m
+provenance:
+  license: apache-2.0
+  continued_pretraining_tokens: 7982809088
+  training_summary: >-
+    Long-context continued pretraining of prelude-9b-anneal300b-iter0989075 (Megatron-LM on LUMI, 16 nodes,
+    global batch 64, cosine LR, 256K stage 8e-6 -> 8e-7): staged ABF 16K/theta 500K (1.0B tokens) -> 32K/1M
+    (1.0B) -> 64K/2M (3.0B) -> 128K/32M (2.0B) -> 256K/64M (1.0B). Data: generic multilingual long-document
+    blend (FinePDFs, DCLM, HPLT3, MegaMath, StarCoder, arXiv, ...), no chat or instruction data. Published
+    evals are long-context retrieval only (forced-choice NIAH 100% to 256K; RULER multikey_3 99 -> 8 from 4K
+    to 128K); no short-context regression suite. Candidate SFT base for 64K-sequence SFT, gated on our
+    4K base_fewshot suite vs the parent.
+registered_at: "2026-10-15T19:45:00+02:00"

@@ -1,0 +1,42 @@
+{
+  "initialized-rope100k": {
+    "examples": 100,
+    "passkey_pct": 100.0,
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/base_hf",
+    "versions": {
+      "vllm": "0.27.0",
+      "transformers": "5.15.1",
+      "torch": "2.13.0"
+    }
+  },
+  "initialized-rope6m": {
+    "examples": 100,
+    "passkey_pct": 81.0,
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/gates_20261018/diagnostic_models/initialized-rope6m",
+    "versions": {
+      "vllm": "0.27.0",
+      "transformers": "5.15.1",
+      "torch": "2.13.0"
+    }
+  },
+  "smoke16-rope6m": {
+    "examples": 100,
+    "passkey_pct": 81.0,
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/runs/prelude-longcontext-smoke-16k/hf/step-1",
+    "versions": {
+      "vllm": "0.27.0",
+      "transformers": "5.15.1",
+      "torch": "2.13.0"
+    }
+  },
+  "smoke16-rope100k": {
+    "examples": 100,
+    "passkey_pct": 100.0,
+    "model": "/gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/gates_20261018/diagnostic_models/smoke16-rope100k",
+    "versions": {
+      "vllm": "0.27.0",
+      "transformers": "5.15.1",
+      "torch": "2.13.0"
+    }
+  }
+}

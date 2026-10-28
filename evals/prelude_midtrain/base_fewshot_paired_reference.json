@@ -1,0 +1,16 @@
+{
+  "protocol_sha256": "76a1b0db98e719c9807c8007e9e1e17340537165b15b5b5dc247c3e8d5f82eb2",
+  "path": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/gates_20261018/base_fewshot_paired_scores.json",
+  "artifact_sha256": "9a65e06c786f5085a078c4f5f43a3f15cc1f6783d6495ffab9c2c6ffa22fc055",
+  "counts": {
+    "MATH": 5000,
+    "GSM8K": 1319,
+    "MMLU-Pro": 12032,
+    "HumanEval+": 164,
+    "MBPP+": 378,
+    "MultiPL-E": 1275
+  },
+  "matches_registered_rounded_scores": true,
+  "note": "Historical reference exported; no candidate stage has been evaluated under this protocol yet.",
+  "self_comparison_control": "pass"
+}

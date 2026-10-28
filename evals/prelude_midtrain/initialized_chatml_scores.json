@@ -1,0 +1,44 @@
+{
+  "GSM8K/thinking=False": {
+    "examples": 100,
+    "score_pct": 16.0,
+    "open_reasoning": 0,
+    "reasoning_tag": 0,
+    "generation_limit": 82
+  },
+  "GSM8K/thinking=True": {
+    "examples": 100,
+    "score_pct": 70.0,
+    "open_reasoning": 0,
+    "reasoning_tag": 0,
+    "generation_limit": 14
+  },
+  "HumanEval+/thinking=False": {
+    "examples": 100,
+    "score_pct": 0.0,
+    "open_reasoning": 0,
+    "reasoning_tag": 0,
+    "generation_limit": 100
+  },
+  "HumanEval+/thinking=True": {
+    "examples": 100,
+    "score_pct": 71.0,
+    "open_reasoning": 0,
+    "reasoning_tag": 0,
+    "generation_limit": 0
+  },
+  "MATH500/thinking=False": {
+    "examples": 100,
+    "score_pct": 4.0,
+    "open_reasoning": 0,
+    "reasoning_tag": 0,
+    "generation_limit": 96
+  },
+  "MATH500/thinking=True": {
+    "examples": 100,
+    "score_pct": 32.0,
+    "open_reasoning": 57,
+    "reasoning_tag": 65,
+    "generation_limit": 68
+  }
+}

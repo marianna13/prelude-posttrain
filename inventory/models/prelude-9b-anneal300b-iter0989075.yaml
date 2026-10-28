@@ -1,0 +1,46 @@
+schema_version: 1
+kind: model
+id: prelude-9b-anneal300b-iter0989075
+display_name: OpenEuroLLM Prelude 9B base, anneal300b iter 989075
+publication:
+  status: published
+  hf_repo: openeurollm/prelude
+  hf_branch: anneal300b_iter_0989075
+  revision: f289699b246dba59907df27e743d4a433613175a
+  url: https://huggingface.co/openeurollm/prelude/tree/anneal300b_iter_0989075
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  parameter_count: 9.09B
+  hidden_layers: 36
+  hidden_size: 4096
+  attention_heads: 32
+  key_value_heads: 8
+  vocab_size: 262272
+  max_position_embeddings: 4096
+  precision: bfloat16
+  tokenizer: >-
+    256k Gemma-style SentencePiece (LlamaTokenizer class), add_bos_token=true: prompts must start with
+    <bos>. No chat template (base model).
+  config_sha256: 7053f40fd4df7a117e855a019c2f20a2f87bd21e67d82a10e1ef88839b2cb025
+  tokenizer_config_sha256: df2af457275bb148c34709eb3d0238ce9ae5d2e412396e3b7e1fdeafc01ad560
+  tokenizer_sha256: fc0f9771fa28309dd6cadb9f94e72ae3f43a8631391a05425acbe03702a3ecbb
+  generation_config_sha256: 030b7a4a0427ffb6a4e0329854ef1b8f93703535c6966f3b02502b2310860210
+materialization:
+  jureca:
+    path: /p/data1/mmlaion/shared/models/openeurollm/prelude-anneal300b-iter0989075
+provenance:
+  license: apache-2.0
+  tokens_seen: 8.30T   # 989075 iterations x 2048 x 4096
+  training_summary: >-
+    Dense 9B base model (Qwen3 architecture, untied embeddings, QK-norm, 4k context) pretrained by
+    OpenEuroLLM on Leonardo with a WSD schedule (~80% English + code + math, ~20% across 36 European
+    languages). Branched from the stable phase at iteration ~953,312 (~8.0T tokens) and annealed for
+    300B tokens to iteration 989,075. This is the plain `anneal300b` run, chosen as the SFT base for
+    math/reasoning/code over the `anneal300b_multilingual1_dominant{1,2}` variants (same iteration,
+    multilingual-focused mixes, uploaded 2026-10-09). The anneal data mix is not documented on the
+    model card (whose README is the generic stable-phase card copied to every branch); "default mix"
+    is inferred from the branch name and upload date (2026-08-14). The `prelude-anneal300b-wsm*`
+    branches at the same iteration look like checkpoint averages of this run.
+  model_card_status: generic_stable_phase_card
+registered_at: "2026-10-15T18:00:00+02:00"

@@ -1,0 +1,138 @@
+[
+ {
+  "name": "aime_2025",
+  "hf_dataset": "math-ai/aime25",
+  "split": "test",
+  "text_fields": [
+   "problem"
+  ]
+ },
+ {
+  "name": "ifeval",
+  "hf_dataset": "google/IFEval",
+  "split": "train",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "humanevalplus",
+  "hf_dataset": "evalplus/humanevalplus",
+  "split": "test",
+  "text_fields": [
+   "prompt",
+   "canonical_solution"
+  ]
+ },
+ {
+  "name": "mbppplus",
+  "hf_dataset": "evalplus/mbppplus",
+  "split": "test",
+  "text_fields": [
+   "prompt",
+   "code"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_cpp",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-cpp",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_java",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-java",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_js",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-js",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_ts",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-ts",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_php",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-php",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_rs",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-rs",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_sh",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-sh",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "multiple_humaneval_lua",
+  "hf_dataset": "nuprl/MultiPL-E",
+  "config": "humaneval-lua",
+  "split": "test",
+  "revision": "28441b6024e71d4a1c1c0f6bf171c935cd5a43f2",
+  "text_fields": [
+   "prompt"
+  ]
+ },
+ {
+  "name": "swe_bench_verified",
+  "hf_dataset": "princeton-nlp/SWE-bench_Verified",
+  "split": "test",
+  "text_fields": [
+   "problem_statement"
+  ]
+ },
+ {
+  "name": "terminal_bench_2_1",
+  "local_glob": "/p/scratch/synthlaion/dc-agent-shared/hf_hub/terminal-bench-2-1/tasks/*/instruction.md",
+  "text_fields": [
+   "file"
+  ]
+ },
+ {
+  "name": "openthoughts_tblite",
+  "local_glob": "/p/scratch/synthlaion/dc-agent-shared/hf_hub/datasets--open-thoughts--OpenThoughts-TBLite/snapshots/7b70111339b4af23cece95d63aeec1c705790868/*/instruction.md",
+  "text_fields": [
+   "file"
+  ]
+ }
+]

@@ -1,0 +1,36 @@
+schema_version: 1
+kind: model
+id: prelude-9b-midtrain-v1-stage4-128k-yarn2-step1001
+display_name: Prelude 9B mid-train v1, stage 4 (128K, YaRN x2 over 64K, RoPE theta 9M), step 1001
+publication:
+  status: published
+  visibility: public
+  hf_repo: marianna13/prelude-9b-midtrain-v1
+  hf_branch: stage4-128k-step1001
+  revision: 033a32d859f0b4157d701381a0569f989ee52a6a
+  published_at: "2026-10-26"
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 131072
+  rope_theta: 9000000
+  rope_parameters: {rope_type: yarn, factor: 2.0, original_max_position_embeddings: 65536}
+  precision: bfloat16
+  base_model:
+    id: prelude-9b-midtrain-v1-stage3-64k-theta9m-step4419
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-midtrain-v1-stage4-128k-yarn2-step1001
+  mn5:
+    hf_export: runs/stage4-128k-yarn2/hf/iter_0001001
+provenance:
+  training_summary: >-
+    Short 128K stage from stage 3 with YaRN x2 applied in training (issue 0054, "Stage 4"): 8,012 rows / 999.46M
+    seen tokens selected by rl/scripts/data/select_prelude_stage4_128k.py, packed with pack_prelude_stage_megatron.py,
+    LR 5e-6, 1,001 steps, MN5 job 47820790 (5h57m). HF/Megatron parity 0.91617 vs 0.91602.
+  evals: "RULER plain 85.0 / 65.8 / 50.4 at 4K/64K/128K, ChatML 90.9 / 64.4 / 45.0 (MN5, issue 0054); few-shot and
+    evalchemy rl/evals/runs/20261023-prelude-midtrain-s4-128k-yarn2-s1001-*"
+registered_at: "2026-10-23T19:00:00+02:00"

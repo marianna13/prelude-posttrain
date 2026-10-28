@@ -1,0 +1,11 @@
+# Data pipeline and rebuild scripts (CPU). Versions of the JURECA environment that built the released data;
+# the rebuild checks token hashes, so a tokenizers/transformers change that alters tokenization is reported.
+pyarrow==26.0.0
+tokenizers==0.23.3
+transformers==5.19.0
+numpy==2.5.4
+jinja2==3.1.6
+duckdb==1.4.3
+scipy==1.18.1
+zstandard
+huggingface_hub>=1.0

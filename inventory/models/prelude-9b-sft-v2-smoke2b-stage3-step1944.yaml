@@ -1,0 +1,29 @@
+schema_version: 1
+kind: model
+id: prelude-9b-sft-v2-smoke2b-stage3-step1944
+display_name: Prelude 9B SFT v2 smoke (2B tokens) from mid-train stage 3 (64K, theta 9M), Megatron iter 1944
+publication:
+  status: unpublished
+identity:
+  architecture: Qwen3ForCausalLM
+  model_type: qwen3
+  hidden_layers: 36
+  hidden_size: 4096
+  vocab_size: 262272
+  max_position_embeddings: 65536
+  rope_theta: 9000000
+  precision: bfloat16
+  chat_template: "Prelude ChatML, Qwen3-compatible (<think>, hermes <tool_call>); enable_thinking=false prefills an empty think block"
+  base_model:
+    id: prelude-9b-midtrain-v1-stage3-64k-theta9m-step4419
+materialization:
+  jureca:
+    path: /p/scratch/ccstdl/dc-agent-shared/checkpoints/prelude-9b-sft-v2-smoke2b-stage3-step1944
+    sha256: "16 files verified 2026-10-23 against prelude-9b-sft-v2-smoke2b-stage3-step1944.sha256"
+  mn5:
+    megatron_checkpoint: /gpfs/scratch/ehpc532/ot/prelude_midtrain_v1/megatron_tp/runs/sft-v2-smoke2b/checkpoints/iter_0001944
+provenance:
+  issue: 0058 (Prelude SFT v2, multi-harness: Terminus-2 + native tool calls)
+  training_summary: "SFT v2 smoke run, ~2B tokens, Megatron on MN5, from stage 3 (step 4419)"
+  evals: "evalchemy (6 jobs) + agentic SWE/TB2.1/TBLite rep 1, eval_moves/prelude_20261023_sft_v2_smoke_s1944.sh"
+registered_at: "2026-10-23T23:30:00+02:00"

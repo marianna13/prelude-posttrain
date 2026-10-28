@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "stages": [
+    {
+      "context": 16384,
+      "packed_sequences": 38791,
+      "batch_size": 64,
+      "steps": 607,
+      "start_step": 0,
+      "end_step": 607,
+      "seen_tokens": 499918595,
+      "trained_tokens": 489184884,
+      "padded_positions": 636485632,
+      "tail_padding_sequences": 57
+    },
+    {
+      "context": 32768,
+      "packed_sequences": 38825,
+      "batch_size": 32,
+      "steps": 1214,
+      "start_step": 607,
+      "end_step": 1821,
+      "seen_tokens": 999867143,
+      "trained_tokens": 973966082,
+      "padded_positions": 1272971264,
+      "tail_padding_sequences": 23
+    },
+    {
+      "context": 65536,
+      "packed_sequences": 41554,
+      "batch_size": 16,
+      "steps": 2598,
+      "start_step": 1821,
+      "end_step": 4419,
+      "seen_tokens": 1999735426,
+      "trained_tokens": 1935346645,
+      "padded_positions": 2724200448,
+      "tail_padding_sequences": 14
+    }
+  ],
+  "schedule_steps": 4419,
+  "total_seen_tokens": 3499521164,
+  "total_trained_tokens": 3398497611,
+  "total_padded_positions": 4633657344,
+  "policy": "finite seed20261017 bijective shuffle, zero-loss tail, no repeats"
+}

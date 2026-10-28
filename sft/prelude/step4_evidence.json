@@ -1,0 +1,686 @@
+{
+  "accounting": [
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:43",
+      "ExitCode": "0:0",
+      "JobID": "15719041",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:43",
+      "ExitCode": "0:0",
+      "JobID": "15719041.batch",
+      "MaxRSS": "8212K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:35",
+      "ExitCode": "0:0",
+      "JobID": "15719041.0",
+      "MaxRSS": "1388812K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:23:13",
+      "ExitCode": "0:0",
+      "JobID": "15719043",
+      "MaxRSS": "",
+      "NCPUS": "2048",
+      "NNodes": "8",
+      "Partition": "dc-cpu",
+      "State": "CANCELLED by 23501"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:23:13",
+      "ExitCode": "15:0",
+      "JobID": "15719043.batch",
+      "MaxRSS": "8212K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:23:05",
+      "ExitCode": "1:0",
+      "JobID": "15719043.0",
+      "MaxRSS": "43627352K",
+      "NCPUS": "2048",
+      "NNodes": "8",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:01",
+      "ExitCode": "0:0",
+      "JobID": "15719043.1",
+      "MaxRSS": "0",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:22",
+      "ExitCode": "0:0",
+      "JobID": "15719062",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:22",
+      "ExitCode": "0:0",
+      "JobID": "15719062.batch",
+      "MaxRSS": "1480176K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:43",
+      "ExitCode": "0:0",
+      "JobID": "15719064",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:43",
+      "ExitCode": "0:0",
+      "JobID": "15719064.batch",
+      "MaxRSS": "1475600K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:24",
+      "ExitCode": "0:0",
+      "JobID": "15719065",
+      "MaxRSS": "",
+      "NCPUS": "1024",
+      "NNodes": "4",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:24",
+      "ExitCode": "0:0",
+      "JobID": "15719065.batch",
+      "MaxRSS": "8216K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:13",
+      "ExitCode": "0:0",
+      "JobID": "15719065.0",
+      "MaxRSS": "26643204K",
+      "NCPUS": "1024",
+      "NNodes": "4",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:02:16",
+      "ExitCode": "0:0",
+      "JobID": "15719066",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:02:16",
+      "ExitCode": "0:0",
+      "JobID": "15719066.batch",
+      "MaxRSS": "10260K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:02:07",
+      "ExitCode": "0:0",
+      "JobID": "15719066.0",
+      "MaxRSS": "11283892K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:06",
+      "ExitCode": "1:0",
+      "JobID": "15719067",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:01:06",
+      "ExitCode": "1:0",
+      "JobID": "15719067.batch",
+      "MaxRSS": "8216K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:58",
+      "ExitCode": "1:0",
+      "JobID": "15719067.0",
+      "MaxRSS": "6847540K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:04:06",
+      "ExitCode": "0:0",
+      "JobID": "15719077",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "CANCELLED by 23501"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:04:09",
+      "ExitCode": "15:0",
+      "JobID": "15719077.batch",
+      "MaxRSS": "8212K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:04:01",
+      "ExitCode": "127:0",
+      "JobID": "15719077.0",
+      "MaxRSS": "27621640K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "FAILED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:07:11",
+      "ExitCode": "0:0",
+      "JobID": "15719080",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:07:11",
+      "ExitCode": "0:0",
+      "JobID": "15719080.batch",
+      "MaxRSS": "10260K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:07:03",
+      "ExitCode": "0:0",
+      "JobID": "15719080.0",
+      "MaxRSS": "27720880K",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:20",
+      "ExitCode": "0:0",
+      "JobID": "15719081",
+      "MaxRSS": "",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "dc-cpu",
+      "State": "COMPLETED"
+    },
+    {
+      "Account": "synthlaion",
+      "Elapsed": "00:00:20",
+      "ExitCode": "0:0",
+      "JobID": "15719081.batch",
+      "MaxRSS": "0",
+      "NCPUS": "256",
+      "NNodes": "1",
+      "Partition": "",
+      "State": "COMPLETED"
+    }
+  ],
+  "all_canonical_counts": {
+    "eligible_rows": 168259890,
+    "long_pdf_under_32768": 519339,
+    "replay_over_4096": 536439,
+    "rows": 169315668,
+    "tokens": 529343825430,
+    "trainable_tokens": 525737061846
+  },
+  "artifact_sha256": {
+    "bounded_parity.json": "352452a4d13c6e94577f011b9b543e5f0df995acd6d5b11a430a182208c27742",
+    "census_input_manifest.json": "59c465ce19e8ef8f6be93bd67df717199854249de1c98822b9e0f33b57ae63e4",
+    "mixture_tools_v3/manifest.json": "986fa95c917784449f0369b5a01a8cc9a4e51a11a64431d1494a253fab308c15",
+    "mixture_v1/feasibility.json": "5ab24f5b9fcb64f5b6bffdbee096e932dace02fb959f28570ba659c5fb504550",
+    "mixture_v3/mixture_input_manifest.json": "ac847c673e7c1fe4d1b286b81bb3b9ad4c4de891498b579f0d05123ff176b7b7",
+    "mixture_v3/mixture_manifest.json": "a03d76a897805785add51d8f93cfd3eb1c38dbd95353a8acdf30ce5931beddc6",
+    "parallel_completion.json": "ac3149919a66a71ee4f6a3f1b575c19bf4579e2f475d6e8f9eaade71cd315fda",
+    "parallel_completion_plan.json": "e48c70a9f472eadf4c75dd53dfb3cef8b9ebca0358495b6f3a1a2b97a8328274",
+    "retained_census.json": "f8d9136d4c4ed7993bffd9af34ab395f4770eb56317edf8e8c18979b6a0cda01",
+    "selection_audit.json": "cbf13836bbdfab10d6ff880eacf8add1374784812e38bfb8a48246b24be08932",
+    "source_exposure_report.json": "990e461514f65f8550cfd49808034faf07412d31a00f513a4cf2ad2527782458"
+  },
+  "category_weights": {
+    "chat_if": 0.1,
+    "code_agent": 0.25,
+    "long_documents": 0.125,
+    "reasoning": 0.3,
+    "replay": 0.225
+  },
+  "census_build_id": "8439380bd2609ca93ff9b7b8a418778529f545d4f0c23327192e8457566048cd",
+  "census_completion_build_id": "481bb408ccca3596fc317c7d1e83c1b9ebf60ba2ce209cb6c3606a8c0a3fe60b",
+  "curation_manifest_sha256": "852dfef3a912d2270a97c9ed0319c2f5049d1ea8e5800c24ee6fff0ccc3d463d",
+  "eligible_counts_by_split": {
+    "train": {
+      "rows": 166594212,
+      "tokens": 512064060367,
+      "trainable_tokens": 508494258155
+    },
+    "validation": {
+      "rows": 1665678,
+      "tokens": 5118310528,
+      "trainable_tokens": 5082404934
+    }
+  },
+  "eligible_training_by_category": {
+    "chat_if": {
+      "rows": 1727683,
+      "tokens": 4967634875,
+      "trainable_tokens": 4965907192
+    },
+    "code_agent": {
+      "rows": 105936334,
+      "tokens": 174866663215,
+      "trainable_tokens": 172788008098
+    },
+    "long_documents": {
+      "rows": 51445,
+      "tokens": 5928124344,
+      "trainable_tokens": 5928072899
+    },
+    "reasoning": {
+      "rows": 55472879,
+      "tokens": 323155573457,
+      "trainable_tokens": 321669611361
+    },
+    "replay": {
+      "rows": 3405871,
+      "tokens": 3146064476,
+      "trainable_tokens": 3142658605
+    }
+  },
+  "final_mixture_weights_frozen": true,
+  "format_weights": {
+    "conversation": 0.35,
+    "document": 0.65
+  },
+  "frozen_counting_code_sha256": {
+    "census_curated_prelude_midtrain.py": "814f5da0dc8fa6bc4b46239bde98d2532c35e3a68da295a2f9559b032670560a",
+    "prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716"
+  },
+  "loader_smoke_completed": false,
+  "max_effective_all_eligible_epochs": 0.533189609803654,
+  "max_effective_qualified_stage_epochs": 1.0,
+  "mixture_build_id": "7239c4ca51352ad5bafc4565cb0675b1ebdb73549fcf92c37401c4f71f493f1b",
+  "mixture_input_build_id": "4ac36760620174839ab7fd402958fa0aeb63c5187f7e0261312a0d5b6e8e70b1",
+  "mv_reference": {
+    "files_sha256": {
+      "mix_weights.py": "6bfda393f67c4d9c642b48c57f5c6e37d3b246f20e9385b200abf4c165272b2c",
+      "tokenize_megatron.py": "ba93816488cb59ba89ba36dda209e4c03209e2936b9d70b4851392669a371914",
+      "tokenize_merge.py": "8f801f21afcfc5a62c6ff1bae4a14364a5ff9ba3e7d97d2b0cc4eac024c483d2"
+    },
+    "reuse": "CPU shard execution and explicit source registry pattern; Prelude renderer/masks and Levanter output remain separate",
+    "revision": "c8abab4cac73da35c2876a34d2837aac6ab37298"
+  },
+  "output_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step4",
+  "python": "3.12.8 | packaged by conda-forge | (main, Dec  5 2024, 14:24:40) [GCC 13.3.0]",
+  "repository_counter_note": "Repository convenience summarize adds an empty-unit guard; production used the separately pinned finalizer and immutable original worker snapshot.",
+  "retained_token_census_completed": true,
+  "runtime_versions": {
+    "duckdb": "1.4.3",
+    "jinja2": "3.1.6",
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.0",
+    "scipy": "1.18.1",
+    "tokenizers": "0.23.3",
+    "transformers": "5.19.0"
+  },
+  "sampled_parent_selection_verified": true,
+  "sampler_policy": {
+    "budget_shortfall_tolerance": 0.002,
+    "category_format_tolerance": 0.001,
+    "continuation": {
+      "added_bos": 1,
+      "implementation": "virtual census only; step-5 token-ID export must match",
+      "new_content": "consume every original token exactly once; no intermediate EOS",
+      "overlap_and_added_bos_loss": 0,
+      "overlap_tokens": 256,
+      "tails": "keep final short chunk, same source/split/group as parent"
+    },
+    "exhaustion": "error; no resampling or weight fallback",
+    "length_minima": {
+      "16384": 8192,
+      "32768": 16384,
+      "65536": 32768
+    },
+    "parent_order": "sha256(seed || canonical id), lexical id tie break",
+    "replacement": false,
+    "replay_maximum": 4096,
+    "reservation_order": [
+      65536,
+      32768,
+      16384
+    ],
+    "seed": "prelude-midtrain-v1-mixture-20261017",
+    "selection": "whole parents, token quotas, skip parents above remaining quota",
+    "short_chat_exception": true,
+    "short_chat_reason": "fixed chat/IF allocation may use short whole conversations; counted separately, never long-range evidence",
+    "source_share_tolerance": 0.0002,
+    "training_order": [
+      16384,
+      32768,
+      65536
+    ]
+  },
+  "schema_version": 1,
+  "seen_tokens": 3499521164,
+  "selected_parents": 1207832,
+  "source_exposure_report_sha256": "990e461514f65f8550cfd49808034faf07412d31a00f513a4cf2ad2527782458",
+  "source_weights": {
+    "FinePDFs-EU-replay/pdf_multilingual/bul_Cyrl": 0.001911893386,
+    "FinePDFs-EU-replay/pdf_multilingual/ces_Latn": 0.001618616588,
+    "FinePDFs-EU-replay/pdf_multilingual/dan_Latn": 0.001785166649,
+    "FinePDFs-EU-replay/pdf_multilingual/deu_Latn": 0.001763494727,
+    "FinePDFs-EU-replay/pdf_multilingual/ekk_Latn": 0.001783041232,
+    "FinePDFs-EU-replay/pdf_multilingual/ell_Grek": 0.001888448568,
+    "FinePDFs-EU-replay/pdf_multilingual/fin_Latn": 0.001716365277,
+    "FinePDFs-EU-replay/pdf_multilingual/fra_Latn": 0.001838966853,
+    "FinePDFs-EU-replay/pdf_multilingual/gle_Latn": 0.001191782203,
+    "FinePDFs-EU-replay/pdf_multilingual/hrv_Latn": 0.001677267426,
+    "FinePDFs-EU-replay/pdf_multilingual/hun_Latn": 0.00168445617,
+    "FinePDFs-EU-replay/pdf_multilingual/ita_Latn": 0.001916040457,
+    "FinePDFs-EU-replay/pdf_multilingual/lit_Latn": 0.001719893839,
+    "FinePDFs-EU-replay/pdf_multilingual/lvs_Latn": 0.001738044953,
+    "FinePDFs-EU-replay/pdf_multilingual/mlt_Latn": 0.002174335294,
+    "FinePDFs-EU-replay/pdf_multilingual/nld_Latn": 0.001895142586,
+    "FinePDFs-EU-replay/pdf_multilingual/pol_Latn": 0.001635087572,
+    "FinePDFs-EU-replay/pdf_multilingual/por_Latn": 0.001678477572,
+    "FinePDFs-EU-replay/pdf_multilingual/ron_Latn": 0.001786234711,
+    "FinePDFs-EU-replay/pdf_multilingual/slk_Latn": 0.001838191121,
+    "FinePDFs-EU-replay/pdf_multilingual/slv_Latn": 0.001743698644,
+    "FinePDFs-EU-replay/pdf_multilingual/spa_Latn": 0.001794478716,
+    "FinePDFs-EU-replay/pdf_multilingual/swe_Latn": 0.001720875454,
+    "FinePDFs-English-long/long_documents": 0.062500000001,
+    "FinePDFs-English-replay/pdf_english": 0.029315597668,
+    "Nemotron-CC-original-high/nemotron_english": 0.065892857143,
+    "Nemotron-Cascade-2-SFT-Data/chat": 0.080000000018,
+    "Nemotron-Cascade-2-SFT-Data/conversational_agent": 0.0,
+    "Nemotron-Cascade-2-SFT-Data/instruction_following": 0.019999999982,
+    "Nemotron-Cascade-2-SFT-Data/math": 0.134106458945,
+    "Nemotron-Cascade-2-SFT-Data/science": 0.020631762933,
+    "Nemotron-Cascade-2-SFT-Data/swe": 0.047630890569,
+    "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-InfiniByte-Reasoning": 0.093607770421,
+    "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Math-Textbooks": 3.7167e-05,
+    "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-RQA": 0.004812952,
+    "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-STEM-SFT": 0.046803888701,
+    "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Scientific-Coding": 0.0,
+    "Nemotron-Terminal-Corpus": 0.047630887553,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/cpp": 0.022566779458,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/csharp": 0.009228124014,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/go": 0.003690510432,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/java": 0.023956345402,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/javascript": 0.015683407324,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/php": 0.05097988195,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/python": 0.014525263207,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/r": 0.001319367283,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/ruby": 0.002856370476,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/rust": 0.001511469025,
+    "UltraData-Stack-v3-L2/data/UltraData-Stack-v3-L2/shell": 0.008420703308,
+    "dclm-baseline-1.0/dclm_english": 0.08929154519,
+    "stack-v3-train/data/code": 0.0,
+    "stack-v3-train/data/long_documents": 0.062499999999
+  },
+  "stage_results": [
+    {
+      "budget": 500000000,
+      "budget_shortfall": 81405,
+      "category_seen_shares": {
+        "chat_if": 0.10001621764039403,
+        "code_agent": 0.24996095814359537,
+        "long_documents": 0.12496081086961768,
+        "reasoning": 0.300025645175291,
+        "replay": 0.22503636817110195
+      },
+      "category_trained_shares": {
+        "chat_if": 0.10208463023563091,
+        "code_agent": 0.24263863190016313,
+        "long_documents": 0.12582815621097565,
+        "reasoning": 0.29975686452323,
+        "replay": 0.22969171713000028
+      },
+      "context": 16384,
+      "document_seen_share": 0.6499515546126065,
+      "document_trained_share": 0.6620289252437326,
+      "seen_tokens": 499918595,
+      "selection": "selection-16384.parquet",
+      "selection_sha256": "1d585a88f37f8ece26a1c2b66e5786ed65f76fda942755c46e53bd4d0430fb48",
+      "trainable_tokens": 489184884
+    },
+    {
+      "budget": 1000000000,
+      "budget_shortfall": 132857,
+      "category_seen_shares": {
+        "chat_if": 0.10001326046174516,
+        "code_agent": 0.24996354640688498,
+        "long_documents": 0.12499219808846143,
+        "reasoning": 0.30000122126225326,
+        "replay": 0.2250297737806552
+      },
+      "category_trained_shares": {
+        "chat_if": 0.1026153383029205,
+        "code_agent": 0.2376369734813825,
+        "long_documents": 0.12743237397460008,
+        "reasoning": 0.3015845915258474,
+        "replay": 0.23073072271524955
+      },
+      "context": 32768,
+      "document_seen_share": 0.6499720963428038,
+      "document_trained_share": 0.6657076267672327,
+      "seen_tokens": 999867143,
+      "selection": "selection-32768.parquet",
+      "selection_sha256": "b172562b24294e576917f35b808acdaee5802c4889602c9ed582c52183f0f4dd",
+      "trainable_tokens": 973966082
+    },
+    {
+      "budget": 2000000000,
+      "budget_shortfall": 264574,
+      "category_seen_shares": {
+        "chat_if": 0.10001321894869505,
+        "code_agent": 0.24996376045597943,
+        "long_documents": 0.12499917826629531,
+        "reasoning": 0.2999941393247088,
+        "replay": 0.22502970300432132
+      },
+      "category_trained_shares": {
+        "chat_if": 0.1032905363576353,
+        "code_agent": 0.22846549487262527,
+        "long_documents": 0.1287877769307834,
+        "reasoning": 0.3072257812501594,
+        "replay": 0.23223041058879662
+      },
+      "context": 65536,
+      "document_seen_share": 0.6499786462251732,
+      "document_trained_share": 0.6705722033584325,
+      "seen_tokens": 1999735426,
+      "selection": "selection-65536.parquet",
+      "selection_sha256": "cf9c443ee245a109fd877554087646803c2cbfb00c82a1251a57e484578dae33",
+      "trainable_tokens": 1935346645
+    }
+  ],
+  "status": "step4-complete",
+  "token_id_release_built": false,
+  "trainable_tokens": 3398497611,
+  "training_has_run": false,
+  "unavailable_preferred_length_buckets": [
+    {
+      "context": 65536,
+      "frozen_weight": 0.0,
+      "pool": "Nemotron-Cascade-2-SFT-Data/conversational_agent",
+      "requested_prior": 0.02,
+      "short_chat_exception": false
+    },
+    {
+      "context": 65536,
+      "frozen_weight": 0.019999999982,
+      "pool": "Nemotron-Cascade-2-SFT-Data/instruction_following",
+      "requested_prior": 0.02,
+      "short_chat_exception": true
+    },
+    {
+      "context": 32768,
+      "frozen_weight": 0.0,
+      "pool": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Scientific-Coding",
+      "requested_prior": 0.02,
+      "short_chat_exception": false
+    },
+    {
+      "context": 65536,
+      "frozen_weight": 0.0,
+      "pool": "Nemotron-Pretraining-Specialized-v1/Nemotron-Pretraining-Scientific-Coding",
+      "requested_prior": 0.02,
+      "short_chat_exception": false
+    },
+    {
+      "context": 65536,
+      "frozen_weight": 0.0,
+      "pool": "stack-v3-train/data/code",
+      "requested_prior": 0.04,
+      "short_chat_exception": false
+    }
+  ],
+  "validation": {
+    "census_checks": {
+      "checksums": true,
+      "row_counts": true,
+      "source_split_coverage": true,
+      "sql_worker_totals_agree": true,
+      "stage_accounting": true,
+      "token_accounting": true
+    },
+    "full_real_unit_parity": {
+      "census_build_id": "8439380bd2609ca93ff9b7b8a418778529f545d4f0c23327192e8457566048cd",
+      "children": 3,
+      "counts": {
+        "eligible_rows": 2767,
+        "rows": 2767,
+        "tokens": 39242872,
+        "trainable_tokens": 24858726
+      },
+      "exact_counts_and_parquet_bytes": true,
+      "helper_sha256": "3475a416feef988db7235550ae5bbc6cd95c200f85084f55fc53de4a358e3335",
+      "metrics_sha256": "ba5dc1dc365b01a48c56508a09c9a77ec629a20f77b3e5cf4b1bdf1bc70bf51d",
+      "rows": 2767,
+      "status": "passed",
+      "task": "core-1496"
+    },
+    "regression_tests_passed": 16,
+    "selection_audit": {
+      "checks": [
+        "manifest digests",
+        "selection checksums",
+        "train-only and globally unique parent IDs",
+        "seeded order",
+        "chunk/mask accounting",
+        "source/category/format token shares",
+        "stage length/replay/PDF eligibility",
+        "no parent repetition",
+        "effective epochs",
+        "code language ratios"
+      ],
+      "manifest_sha256": "a03d76a897805785add51d8f93cfd3eb1c38dbd95353a8acdf30ce5931beddc6",
+      "max_effective_trained_epochs": 0.533189609803654,
+      "mixture_build_id": "7239c4ca51352ad5bafc4565cb0675b1ebdb73549fcf92c37401c4f71f493f1b",
+      "seen_tokens": 3499521164,
+      "selected_parents": 1207832,
+      "stage_parents": {
+        "16384": 186595,
+        "32768": 347764,
+        "65536": 673473
+      },
+      "status": "passed",
+      "trainable_tokens": 3398497611,
+      "verifier_sha256": "53f6df6a3a27c64c0de45e579bb5c4b0d829a4c7137bdf99ced86327d725569f"
+    }
+  }
+}

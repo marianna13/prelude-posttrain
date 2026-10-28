@@ -1,0 +1,57 @@
+{
+  "ruler_vt": {
+    "examples": 100,
+    "score_pct": 11.2
+  },
+  "ruler_qa_hotpot": {
+    "examples": 100,
+    "score_pct": 9.0
+  },
+  "ruler_qa_squad": {
+    "examples": 100,
+    "score_pct": 2.3333333333333335
+  },
+  "ruler_fwe": {
+    "examples": 100,
+    "score_pct": 33.666666666666664
+  },
+  "ruler_cwe": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_multikey_1": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_multikey_2": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_multikey_3": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_multiquery": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_multivalue": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_single_1": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_single_2": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "niah_single_3": {
+    "examples": 100,
+    "score_pct": 0.0
+  },
+  "ruler_mean_pct": 4.323076923076923,
+  "complete_13_tasks": true,
+  "target_met": false
+}

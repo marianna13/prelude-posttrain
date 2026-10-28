@@ -1,0 +1,45 @@
+{#- ChatML chat template for OpenEuroLLM Prelude SFT, Qwen3-compatible output (<think>, <tool_call>, <tool_response>),
+    so vLLM's qwen3 reasoning parser and hermes tool parser apply unchanged.
+    - Starts with <bos> (Prelude was pretrained with it; vLLM tokenizes chat prompts without special tokens).
+    - reasoning_content is rendered whenever present; the data drops it from context-only assistant turns before the
+      last user message (Qwen3 semantics), which keeps every prefix a prefix of the whole.
+    - enable_thinking=false prefills an empty think block.
+    All whitespace is written as string literals: HF renders with trim_blocks, which eats a newline after a tag. -#}
+{{- bos_token }}
+{%- set ns = namespace(start=0) %}
+{%- if messages and messages[0].role == 'system' %}{%- set ns.start = 1 %}{%- endif %}
+{%- if tools %}
+    {{- '<|im_start|>system\n' }}
+    {%- if ns.start == 1 %}{{- messages[0].content + '\n\n' }}{%- endif %}
+    {{- '# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>' }}
+    {%- for tool in tools %}{{- '\n' + (tool | tojson) }}{%- endfor %}
+    {{- '\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{"name": <function-name>, "arguments": <args-json-object>}\n</tool_call><|im_end|>\n' }}
+{%- elif ns.start == 1 %}
+    {{- '<|im_start|>system\n' + messages[0].content + '<|im_end|>\n' }}
+{%- endif %}
+{%- for message in messages[ns.start:] %}
+    {%- set i = loop.index0 + ns.start %}
+    {%- if message.role == 'user' or message.role == 'system' %}
+        {{- '<|im_start|>' + message.role + '\n' + message.content + '<|im_end|>\n' }}
+    {%- elif message.role == 'assistant' %}
+        {{- '<|im_start|>assistant\n' }}
+        {%- if message.reasoning_content %}{{- '<think>\n' + (message.reasoning_content | trim) + '\n</think>\n\n' }}{%- endif %}
+        {{- message.content or '' }}
+        {%- for tc in message.tool_calls or [] %}
+            {%- set f = tc.function if tc.function is defined else tc %}
+            {%- if not loop.first or message.content %}{{- '\n' }}{%- endif %}
+            {{- '<tool_call>\n{"name": "' + f.name + '", "arguments": ' }}
+            {%- if f.arguments is string %}{{- f.arguments }}{%- else %}{{- f.arguments | tojson }}{%- endif %}
+            {{- '}\n</tool_call>' }}
+        {%- endfor %}
+        {{- '<|im_end|>\n' }}
+    {%- elif message.role == 'tool' %}
+        {%- if i == 0 or messages[i - 1].role != 'tool' %}{{- '<|im_start|>user' }}{%- endif %}
+        {{- '\n<tool_response>\n' + message.content + '\n</tool_response>' }}
+        {%- if i == messages | length - 1 or messages[i + 1].role != 'tool' %}{{- '<|im_end|>\n' }}{%- endif %}
+    {%- endif %}
+{%- endfor %}
+{%- if add_generation_prompt %}
+    {{- '<|im_start|>assistant\n' }}
+    {%- if enable_thinking is defined and enable_thinking is false %}{{- '<think>\n\n</think>\n\n' }}{%- endif %}
+{%- endif %}

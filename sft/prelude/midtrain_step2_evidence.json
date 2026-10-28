@@ -1,0 +1,193 @@
+{
+  "artifact_root": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step2",
+  "artifact_sha256": {
+    "adapter_manifest.json": "ca2011d17db936edd1c158aed0e77bb914cc25e035466933df19cc22c307a988",
+    "base_hf/midtrain_initialization.json": "6f2b97d154366d2d484c90f931211bec816644534157c96671bc750863a8939a",
+    "loader_runtime.json": "1d3e1f2545d9a7ffdea71e6ee0bcca065810cfc303a7e32ec6999f99432494ee",
+    "loader_tests.log": "f1ca658fc96bf10a0e0b1ed53f1fe6cbc84a1977dae0d6d071dc3e0ba234f47d",
+    "pilot_summary.json": "5af93a80ae7627941a2391d2f623790b9d3a1d174fb090b40a2ba459d57ef10c",
+    "source_tests.log": "dc6049ca827e0485118df81e70dba86ba863f7f866a0df6f2b7652eaf1d87a5a",
+    "tokenizer_contract.json": "421faaa6511710299191cf5260ca2bd9a4f874d8fdafc2c1dea1369c86cbffab"
+  },
+  "benchmark_decontamination_completed": false,
+  "build_id": "8d499b5955ec902885e8e2ea1f14b667a83f9f0bcc8c24422fa6e34d54a370aa",
+  "code_sha256": {
+    "scripts/data/materialize_prelude_midtrain.py": "bfeafa97f87d60ef0d094bb04232537401b0cb2c274955fc27308ac43cee8146",
+    "scripts/data/prelude_lf_counting.py": "06c9d8ead097a6e6c1a0fa6125a627fb33b5e6e3e978f91c49ade3771d0a73b2",
+    "scripts/data/prelude_midtrain.py": "143e05d1593ca48934e1c93e981a8ecbd8367535be605769ed1c3c86a71f7716",
+    "scripts/sft_gen/prerender_levanter.py": "90bb874be630ec7a6509f8ce10e314bf6c731ca137fb047c29bf37f583db0872",
+    "sft/levanter/scripts_grug/grug_datakit_chat.py": "68c66f6870904b10788f7a699c35799154c7763f63d4a35f722a486772e57e27",
+    "sft/levanter/scripts_grug/sft_main.py": "0c877b4683f506776953435db0130bbac02dc241473b8d3f12ee1833e1bc71b3",
+    "sft/prelude/midtrain_format.py": "6c1cb6ff0c935f3db275627acac6b9f9f85d57f4d025f675e5c03864c3723cbd",
+    "sft/prelude/prepare_midtrain_tokenizer.py": "7822d082f6ac5e3cfe94e9bed8f34c93251233d8e0ceff969f5c4ce63fa36e3d"
+  },
+  "date": "2026-10-17",
+  "deduplication_completed": false,
+  "final_mixture_weights_frozen": false,
+  "full_source_materialization_completed": false,
+  "image": {
+    "bytes": 13773099008,
+    "mtime_ns": 1790857611742236298,
+    "path": "/p/data1/mmlaion/container/levanter_jax_26.09-py3_torch.sif"
+  },
+  "jobs": {
+    "base_initialization": "15718661",
+    "source_pilot": "15718676",
+    "source_tests": "15718683"
+  },
+  "loader_runtime": {
+    "loader_files_sha256": {
+      "compat/hf_checkpoints.py": "62f9a96b4b2e3368471d7def3fedd831913560e80f34105d6a55281bbc7d8e0d",
+      "data/packing.py": "99ea8aa52d7f06f765447312226502bd0f95a93327b3295d25a8ee9dcb5b9812",
+      "data/text/datasets.py": "4fd44ff53067beb7a2ac05cc4d41f0dda18012691751a85e7c5eb65c4849823b",
+      "data/text/examples.py": "199a86abfd0f85eca39e6e73042c05ba56822dc35c26a5ed048dbb2f1299ec49",
+      "data/text/formats.py": "a6073b2db24bf5330817455fe757e9b041da5b6d5c1b80c9e38144099a970e5c"
+    },
+    "versions": {
+      "jax": "0.11.2",
+      "pyarrow": "23.0.1",
+      "tokenizers": "0.22.2",
+      "torch": "2.14.1",
+      "transformers": "5.12.1"
+    }
+  },
+  "pilot": {
+    "counts": {
+      "eligible_license_no_license": 101,
+      "eligible_license_permissive": 1,
+      "empty_system": 4,
+      "excluded_vendor_file": 1,
+      "genuine_user_turn": 113,
+      "inline_reasoning_preserved": 671,
+      "inline_tool_calls_preserved": 203,
+      "input_rows": 306,
+      "literal_boundary_in_content_preserved": 10,
+      "normalized_rows": 303,
+      "raw_document_preserved": 197,
+      "rejected_ambiguous_tool_response": 2,
+      "rejected_ineligible_code_file": 1,
+      "render_deferred_overlength": 3,
+      "rendered_rows": 300,
+      "response_wrappers_unwrapped": 198,
+      "scanned_rows": 306,
+      "target_tokens": 1974521,
+      "terminal_feedback_to_tool": 533,
+      "terminal_initial_task": 81,
+      "tokens": 2616608,
+      "tool_role_response": 533,
+      "user_wrapped_response_to_tool": 198
+    },
+    "groups": 102
+  },
+  "schema_version": 1,
+  "scope": "implemented adapters plus bounded source verification; not a full materialization or final release",
+  "source_files": 965,
+  "status": "step2-complete",
+  "tests": {
+    "all_passed": true,
+    "real_levanter_loader_and_hf_export": 6,
+    "source_and_initialization": 23
+  },
+  "tokenizer": {
+    "base_config_sha256": "a8e8a2cfff303e1e5186ea8c360b096e9f9077c9699fbc8cefb871524a3733f7",
+    "base_index_sha256": "b498af7971e2601c0fed1089141adf36ea6e0f3bc4bed4ce836f169a0f2d8cb4",
+    "base_model": "/p/data1/mmlaion/shared/models/openeurollm/prelude-anneal300b-ml1-dominant2-iter0989075",
+    "base_revision": "9d252ade085f74176eb2a3fa321a59f3b5af6deb",
+    "conversation_eos_id": 262146,
+    "document_eos_id": 2,
+    "initialization": {
+      "apply_once": "fresh base HF import only; resume/export never reinitializes",
+      "ids": [
+        262145,
+        262146,
+        262147,
+        262148,
+        262149,
+        262150
+      ],
+      "method": "per-matrix mean of native rows [0,262144), float64 accumulation; round to storage dtype",
+      "native_rows": [
+        0,
+        262144
+      ],
+      "pad_row_unchanged": true,
+      "resize": false
+    },
+    "mask_policy": "prelude_midtrain_v1; whole tool blocks incl headers/end/LF masked; ordinary targets trained; BOS untrained",
+    "matrices": {
+      "lm_head.weight": {
+        "data_offsets": [
+          0,
+          2148532224
+        ],
+        "dtype": "BF16",
+        "file": "model-00001-of-00004.safetensors",
+        "header_sha256": "ee1629756c7b72b36bd2c48b463f8d422349d491648f3a5ff3c9e8c907faf264",
+        "shape": [
+          262272,
+          4096
+        ]
+      },
+      "model.embed_tokens.weight": {
+        "data_offsets": [
+          2148532224,
+          4297064448
+        ],
+        "dtype": "BF16",
+        "file": "model-00001-of-00004.safetensors",
+        "header_sha256": "ee1629756c7b72b36bd2c48b463f8d422349d491648f3a5ff3c9e8c907faf264",
+        "shape": [
+          262272,
+          4096
+        ]
+      }
+    },
+    "metadata_fix": "special_tokens_map.json EOS -> <|im_end|> to match tokenizer_config.json; no tokenization/template change",
+    "model_vocab_size": 262272,
+    "packing": {
+      "block_cross_document_attention": true,
+      "mask_user_turns": true,
+      "padding": "ChatDataset zero-pads IDs and masks; never train padding or next-document BOS",
+      "slice_strategy": "raise"
+    },
+    "schema_version": 1,
+    "source_tokenizer_files_sha256": {
+      "added_tokens.json": "8301006588f1bee825ad0e2ea54a3dadf08f80dceb1804e5c6a177bf0812d08c",
+      "chat_template.jinja": "f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047",
+      "chat_tokenizer_manifest.json": "b30a0433077da36c0b65ff4a3038abfeb59c1744c937c89e06682bef458daab5",
+      "generation_config.json": "164adeaae503cbada3375648ee9f1b0ac0fb8cdb255e75a2d33c7ae112ea6f48",
+      "special_tokens_map.json": "bebf56ad571ccc6109dd94f4205738dcbda34cf4fa320ae63c6e91d639138daf",
+      "tokenizer.json": "673fb4ba274ff03cf9d5fd18d4b6d09a10ab40a3f2835490d9f43916031fa856",
+      "tokenizer.model": "ac214401227404105817141c21c6693e3b17c878465a42765d2c345310e003ce",
+      "tokenizer_config.json": "68d5292f8e261cc98638aa4b1c5ba95170accdcee9725fd92feaa43a9a35a699"
+    },
+    "step1": "/p/data1/mmlaion/marianna/midtrain_mixes/prelude_midtrain_v1/step1",
+    "step1_sha256": "7eeb1ab0bfff8f0573ecb53a753faa2b3a302422109839858f8cc035e6803909",
+    "token_ids": {
+      "</think>": 262148,
+      "</tool_call>": 12,
+      "</tool_response>": 262150,
+      "<bos>": 1,
+      "<eos>": 2,
+      "<pad>": 262144,
+      "<think>": 262147,
+      "<tool_call>": 11,
+      "<tool_response>": 262149,
+      "<|im_end|>": 262146,
+      "<|im_start|>": 262145
+    },
+    "tokenizer_files_sha256": {
+      "added_tokens.json": "8301006588f1bee825ad0e2ea54a3dadf08f80dceb1804e5c6a177bf0812d08c",
+      "chat_template.jinja": "f2e1a080f64d2c62fb26660197ed5a5dd2b142d254cd65e910e8e6e2fa9bd047",
+      "chat_tokenizer_manifest.json": "b30a0433077da36c0b65ff4a3038abfeb59c1744c937c89e06682bef458daab5",
+      "generation_config.json": "164adeaae503cbada3375648ee9f1b0ac0fb8cdb255e75a2d33c7ae112ea6f48",
+      "special_tokens_map.json": "77af85821647a9fafb392117e91f3ebc2a9fcfbf9637bf74ba113621df47ba66",
+      "tokenizer.json": "673fb4ba274ff03cf9d5fd18d4b6d09a10ab40a3f2835490d9f43916031fa856",
+      "tokenizer.model": "ac214401227404105817141c21c6693e3b17c878465a42765d2c345310e003ce",
+      "tokenizer_config.json": "68d5292f8e261cc98638aa4b1c5ba95170accdcee9725fd92feaa43a9a35a699"
+    },
+    "tokenizer_length": 262151
+  },
+  "training_has_run": false,
+  "work_units": 6740
+}
