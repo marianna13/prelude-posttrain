@@ -37,7 +37,7 @@ bytes and the same tokens. The code that builds the data from these pointers is
 | `midtrain/stage1_16k` | 186,595 parents | 0.50B | 0.49B |
 | `midtrain/stage2_32k` | 347,764 parents | 1.00B | 0.97B |
 | `midtrain/stage3_64k` | 673,473 parents | 2.00B | 1.94B |
-| `midtrain/stage4_128k` | 334,353 parents | 1.00B | |
+| `midtrain/stage4_128k` | 334,353 parents | 1.00B | 0.96B |
 | `sft_v2` (rows with `trained = true`) | 4,339,626 conversations | 37.68B | 30.08B |
 
 ## Files
